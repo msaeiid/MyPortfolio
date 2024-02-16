@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Stable">
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="about update works fine">
+      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0010_alter_user_facebook_alter_user_github_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyPortfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -110,23 +112,31 @@
       <workItem from="1707929372993" duration="5955000" />
       <workItem from="1708079318649" duration="5201000" />
     </task>
+    <task id="LOCAL-00001" summary="about update works fine">
+      <option name="closed" value="true" />
+      <created>1708111224754</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708111224754</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="about update works fine" />
+    <option name="LAST_COMMIT_MESSAGE" value="about update works fine" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/Portfolio/index.html</url>
-          <line>144</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Portfolio/views.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="21" />
+          <line>27</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

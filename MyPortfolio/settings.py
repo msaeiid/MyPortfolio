@@ -50,6 +50,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'MyPortfolio.urls'
 AUTH_USER_MODEL = 'Portfolio.User'
+LOGIN_URL = '/admin/'
 
 TEMPLATES = [
     {

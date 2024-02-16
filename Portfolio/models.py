@@ -116,10 +116,10 @@ class User(AbstractUser):
     postal_code = models.CharField(_('Postal code'), max_length=10, null=True, blank=True)
     street_address = models.CharField(_('Street address'), null=True, blank=True, max_length=50)
     professional_summary = models.TextField(_('Professional Summary'), null=True, blank=True)
-    linkedin = models.URLField(_('LinkedIn'), null=True)
-    github = models.URLField(_('GitHub'), null=True)
-    twitter = models.URLField(_('Twitter'), null=True)
-    facebook = models.URLField(_('Facebook'), null=True)
+    linkedin = models.URLField(_('LinkedIn'), null=True, blank=True)
+    github = models.URLField(_('GitHub'), null=True, blank=True)
+    twitter = models.URLField(_('Twitter'), null=True, blank=True)
+    facebook = models.URLField(_('Facebook'), null=True, blank=True)
     interests = models.TextField(_('Interests'), null=True, blank=True)
 
     def get_birth_date(self):
