@@ -1,8 +1,8 @@
 from django.urls import path
 
-from Portfolio.views import home_view, about_view
+from Portfolio.views import PortfolioView, AboutView
 
 urlpatterns = [
-    path('', home_view, name='home'),
-    path('aboutme/', about_view, name='about_me')
+    path('<slug:pk>/', PortfolioView.as_view(), name='home'),
+    path('<slug:pk>/about_edit', AboutView.as_view(), name='about_edit')
 ]
