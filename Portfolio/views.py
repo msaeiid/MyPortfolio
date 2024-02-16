@@ -21,4 +21,12 @@ def home_view(request):
 
     return render(request=request, template_name='Portfolio/index.html', context=context)
 
+
+def about_view(request):
+    if request.method == 'GET':
+        pass
+
+    if request.method == 'POST':
+        pass
+
 # Create your views here.

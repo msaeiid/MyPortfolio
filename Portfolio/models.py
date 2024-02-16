@@ -122,5 +122,10 @@ class User(AbstractUser):
     facebook = models.URLField(_('Facebook'), null=True)
     interests = models.TextField(_('Interests'), null=True, blank=True)
 
+    def get_birth_date(self):
+        month = "{}".format(self.birth_date.month).zfill(2)
+        day = "{}".format(self.birth_date.day).zfill(2)
+        return '{}-{}-{}'.format(self.birth_date.year, month, day)
+
     def __str__(self):
         return self.username
