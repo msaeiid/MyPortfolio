@@ -49,7 +49,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'MyPortfolio.urls'
-LOGIN_URL = '/admin/'
+LOGIN_URL = '/admin'
+LOGOUT_REDIRECT_URL = '/admin'
 
 TEMPLATES = [
     {
