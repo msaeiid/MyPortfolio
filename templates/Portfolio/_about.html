@@ -3,8 +3,14 @@
         <h1 class="mb-0">{{ portfolio.user.first_name }}
             <span class="text-primary">{{ portfolio.user.last_name }}</span>
         </h1>
-        <div class="subheading mb-5"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{ portfolio.birth_date.month }} <sup>st</sup> {{ portfolio.birth_date.day }} {{ portfolio.birth_date.year }} · <i class="fa fa-mobile" aria-hidden="true"></i> {{ portfolio.phone_number }} ·  
-            <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:name@email.com">{{ portfolio.user.email }}</a> · <i class="fa fa-map-marker" aria-hidden="true"></i> {{ portfolio.street_address }} {{ portfolio.city }} {{ portfolio.country }}
+        <div class="subheading mb-5"><i class="fa fa-birthday-cake"
+                                        aria-hidden="true"></i> {{ portfolio.birth_date.month }}
+            <sup>st</sup> {{ portfolio.birth_date.day }} {{ portfolio.birth_date.year }} · <i class="fa fa-mobile"
+                                                                                              aria-hidden="true"></i> {{ portfolio.phone_number }}
+            ·
+            <i class="fa fa-envelope" aria-hidden="true"></i> <a
+                    href="mailto:name@email.com">{{ portfolio.user.email }}</a> · <i class="fa fa-map-marker"
+                                                                                     aria-hidden="true"></i> {{ portfolio.postal_code }} {{ portfolio.street_address }} {{ portfolio.city }} {{ portfolio.country }}
         </div>
         <p class="mb-5">{{ portfolio.professional_summary }}</p>
         <ul class="list-inline list-social-icons mb-0">

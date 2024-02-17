@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Some bugfix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Some improvement">
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/_about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +115,7 @@
       <workItem from="1708157752349" duration="2737000" />
       <workItem from="1708160566457" duration="1751000" />
       <workItem from="1708162629629" duration="1473000" />
-      <workItem from="1708164128624" duration="17719000" />
+      <workItem from="1708164128624" duration="18052000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -174,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708187979994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Some improvement">
+      <option name="closed" value="true" />
+      <created>1708189472942</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708189472942</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +194,8 @@
     <MESSAGE value="SOme improve" />
     <MESSAGE value="Logout developer" />
     <MESSAGE value="Some bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some bugfix" />
+    <MESSAGE value="Some improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some improvement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
