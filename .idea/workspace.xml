@@ -4,31 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="some improve on views">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0002_alter_certificate_credential_id_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0003_remove_portfolio_background_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/signals.py" afterDir="false" />
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="SOme improve">
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_awards.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_interests.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_skills.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyPortfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0002_alter_certificate_expiration_month_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0003_alter_certificate_expiration_month_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0004_alter_user_avatar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0005_user_facebook_user_github_user_linkedin_user_twitter_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0006_user_interests_alter_user_background_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0007_alter_user_interests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0008_alter_user_interests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0009_alter_user_interests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/migrations/0010_alter_user_facebook_alter_user_github_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/avatars/photo_2023-11-10_14-39-54.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -138,7 +125,7 @@
       <workItem from="1708157752349" duration="2737000" />
       <workItem from="1708160566457" duration="1751000" />
       <workItem from="1708162629629" duration="1473000" />
-      <workItem from="1708164128624" duration="4940000" />
+      <workItem from="1708164128624" duration="8284000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -164,7 +151,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708159904316</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SOme improve">
+      <option name="closed" value="true" />
+      <created>1708173336901</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708173336901</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +169,8 @@
     <MESSAGE value="about update works fine" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="some improve on views" />
-    <option name="LAST_COMMIT_MESSAGE" value="some improve on views" />
+    <MESSAGE value="SOme improve" />
+    <option name="LAST_COMMIT_MESSAGE" value="SOme improve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
