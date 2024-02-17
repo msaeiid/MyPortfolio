@@ -23,7 +23,6 @@ class AboutView(LoginRequiredMixin, TemplateView):
     model = User
     template_name = 'Portfolio/index.html'
 
-    @login_required
     def post(self, request, *args, **kwargs):
         instance = get_object_or_404(User, username='admin')
         form = AboutForm(request.POST or None, instance=instance)
