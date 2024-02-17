@@ -4,7 +4,7 @@
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         </button>
         <h2 class="mb-5">Experience</h2>
-        {% for experience in experiences %}
+        {% for experience in portfolio.experience_set.all %}
             <div class="resume-item d-flex flex-column flex-md-row mb-5">
                 <div class="resume-content mr-auto">
                     <h3 class="mb-0">{{ experience.title }}</h3>
