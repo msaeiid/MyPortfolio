@@ -1,0 +1,179 @@
+<section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <div class="my-auto">
+        <h1 class="mb-0">{{ user.first_name }}
+            <span class="text-primary">{{ user.last_name }}</span>
+        </h1>
+        <div class="subheading mb-5">{{ user.street_address }} · {{ user.phone_number }} ·
+            <a href="mailto:name@email.com">{{ user.email }}</a>
+        </div>
+        <p class="mb-5">{{ user.professional_summary }}</p>
+        <ul class="list-inline list-social-icons mb-0">
+            {% if user.facebook %}
+                <li class="list-inline-item">
+                    <a href="{{ user.facebook }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                    </a>
+                </li>
+            {% endif %}
+            {% if user.twitter %}
+                <li class="list-inline-item">
+                    <a href="{{ user.twitter }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if user.linkedin %}
+                <li class="list-inline-item">
+                    <a href="{{ user.linkedin }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if user.github %}
+                <li class="list-inline-item">
+                    <a href="{{ user.github }}">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+        {{ user.is_authenticated }}
+        {{ user.username }}
+        <button type="button" class="btn btn-primary float-right col-1" data-toggle="modal"
+                data-target=".about_me_modal">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+        <div class="modal fade about_me_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="{% url 'about_edit' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="first_name">First name</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name"
+                                       value="{{ user.first_name }}"
+                                       placeholder="first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last name</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name"
+                                       value="{{ user.last_name }}"
+                                       placeholder="last name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" value="{{ user.email }}"
+                                       name="email"
+                                       placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone_number">Phone number</label>
+                                <input type="tel" class="form-control" id="phone_number"
+                                       value="{{ user.phone_number }}"
+                                       name="phone_number"
+                                       placeholder="phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Street address</label>
+                                <input type="text" class="form-control" id="street_address"
+                                       value="{{ user.street_address }}"
+                                       name="street_address"
+                                       placeholder="street address">
+                            </div>
+                            <div class="form-group">
+                                <label for="postal_code">Postal code</label>
+                                <input type="text" class="form-control" id="postal_code"
+                                       value="{{ user.postal_code }}"
+                                       name="postal_code"
+                                       placeholder="postal code">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Birth date</label>
+                                <input type="date" class="form-control" id="birth_date"
+                                       value="{{ user.get_birth_date }}"
+                                       name="birth_date"
+                                       placeholder="birth date">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Country</label>
+                                <input type="text" class="form-control" id="country"
+                                       value="{{ user.country }}"
+                                       name="country"
+                                       placeholder="country">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="mobile">City</label>
+                                <input type="text" class="form-control" id="city"
+                                       value="{{ user.city }}"
+                                       name="city"
+                                       placeholder="city">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="professional_summary">Professional summary</label>
+                                <textarea class="form-control" id="professional_summary"
+                                          name="professional_summary"
+                                          rows="3">{{ user.professional_summary }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="linkedin">Linkedin</label>
+                                <input type="url" class="form-control" id="linkedin"
+                                       value="{{ user.linkedin }}"
+                                       name="linkedin"
+                                       placeholder="linkedin">
+                            </div>
+                            <div class="form-group">
+                                <label for="linkedin">Github</label>
+                                <input type="url" class="form-control" id="github"
+                                       value="{{ user.github }}"
+                                       name="github"
+                                       placeholder="github">
+                            </div>
+                            <div class="form-group">
+                                <label for="twitter">Twitter</label>
+                                <input type="url" class="form-control" id="twitter"
+                                       value="{{ user.twitter }}"
+                                       name="twitter"
+                                       placeholder="twitter">
+                            </div>
+                            <div class="form-group">
+                                <label for="facebook">Facebook</label>
+                                <input type="url" class="form-control" id="facebook"
+                                       value="{{ user.facebook }}"
+                                       name="facebook"
+                                       placeholder="facebook">
+                            </div>
+                            <input type="submit" class="btn btn-lg btn-success float-right"
+                                   value="Save changes"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
