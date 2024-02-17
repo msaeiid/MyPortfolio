@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Logout developer">
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Some bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_awards.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_awards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_interests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_interests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,7 @@
       <workItem from="1708157752349" duration="2737000" />
       <workItem from="1708160566457" duration="1751000" />
       <workItem from="1708162629629" duration="1473000" />
-      <workItem from="1708164128624" duration="16287000" />
+      <workItem from="1708164128624" duration="17719000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -170,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708180741378</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Some bugfix">
+      <option name="closed" value="true" />
+      <created>1708187979994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708187979994</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +186,8 @@
     <MESSAGE value="some improve on views" />
     <MESSAGE value="SOme improve" />
     <MESSAGE value="Logout developer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logout developer" />
+    <MESSAGE value="Some bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some bugfix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
