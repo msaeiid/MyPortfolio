@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect
@@ -6,26 +5,27 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
 from Portfolio.forms import AboutForm
-from Portfolio.models import User
+from Portfolio.models import Portfolio
 
 
 class PortfolioView(TemplateView):
-    model = User
+    model = Portfolio
     template_name = 'Portfolio/index.html'
 
     def get(self, request, *args, **kwargs):
-        user = User.objects.get(username=kwargs.get('pk', 'admin'))
-        context = {'user': user}
+        portfolio = get_object_or_404(Portfolio, user__username=kwargs.get('pk', 'admin'))
+
+        context = {'portfolio': portfolio}
         return self.render_to_response(context)
 
 
 class AboutView(LoginRequiredMixin, TemplateView):
-    model = User
+    model = Portfolio
     template_name = 'Portfolio/index.html'
 
     def post(self, request, *args, **kwargs):
-        instance = get_object_or_404(User, username='admin')
-        form = AboutForm(request.POST or None, instance=instance)
+        instance = get_object_or_404(Portfolio, user__username='admin')
+        form = AboutForm(request.POST or None, instance=instance, files=request.FILES)
         if form.is_valid():
             form.save()
         return redirect(reverse_lazy('home'))

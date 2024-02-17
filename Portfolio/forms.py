@@ -1,16 +1,12 @@
 from django.forms import ModelForm
-
-from Portfolio.models import User
+from Portfolio.models import Portfolio
 
 
 class AboutForm(ModelForm):
     class Meta:
-        model = User
+        model = Portfolio
         fields = [
-            'first_name',
-            'last_name',
             'avatar',
-            'background_image',
             'birth_date',
             'phone_number',
             'country',
