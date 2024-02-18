@@ -121,18 +121,7 @@
             </a>
             <h2 class="mb-5">Experience</h2>
             {% for experience in portfolio.experience_set.all %}
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">{{ experience.title }}</h3>
-                        <div class="subheading mb-3">{{ experience.industry }}</div>
-                        <p>{{ experience.description }}</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">{{ experience.start_month }} {{ experience.start_year }} -
-                            {% if experience.is_present %} Present {% else %} {{ experience.end_month }}
-                                {{ experience.end_year }} {% endif %}</span>
-                    </div>
-                </div>
+                {% include 'Portfolio/_execise.html' %}
             {% endfor %}
         </div>
     </section>
@@ -144,18 +133,7 @@
             </button>
             <h2 class="mb-5">Education</h2>
             {% for education in portfolio.education_set.all %}
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">{{ education.school }}</h3>
-                        <div class="subheading mb-3">{{ education.degree }}</div>
-                        <div>{{ education.field_of_study }}</div>
-                        <p>GPA: {{ education.grade }}</p>
-                        <p>{{ education.description }}</p>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">{{ education.start_month }} {{ education.start_year }} - {{ education.end_month }} {{ education.end_year }}</span>
-                    </div>
-                </div>
+                {% include 'Portfolio/_education.html' %}
             {% endfor %}
 
         </div>
@@ -269,17 +247,7 @@
             <ul class="fa-ul mb-0">
 
                 {% for certificate in portfolio.certificate_set.all %}
-                    <li>
-                        <i class="fa-li fa fa-trophy text-warning"></i>
-                        <a href="{{ certificate.credential_url }}">{{ certificate.name }}</a>
-                        <div class="resume-date text-md-right">
-                        <span class="text-primary">{{ certificate.issue_month }} {{ certificate.issue_year }}
-                            {% if certificate.issue_month and certificate.issue_year and certificate.expiration_month and certificate.expiration_year %}
-                                - {{ certificate.expiration_month }} {{ certificate.expiration_year }}
-                            {% endif %}
-                        </span>
-                        </div>
-                    </li>
+                    {% include 'Portfolio/_certificate.html' %}
                 {% endfor %}
             </ul>
         </div>

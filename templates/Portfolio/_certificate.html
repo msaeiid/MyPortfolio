@@ -1,0 +1,11 @@
+<li>
+    <i class="fa-li fa fa-trophy text-warning"></i>
+    <a href="{{ certificate.credential_url }}">{{ certificate.name }}</a>
+    <div class="resume-date text-md-right">
+                        <span class="text-primary">{{ certificate.issue_month }} {{ certificate.issue_year }}
+                            {% if certificate.issue_month and certificate.issue_year and certificate.expiration_month and certificate.expiration_year %}
+                                - {{ certificate.expiration_month }} {{ certificate.expiration_year }}
+                            {% endif %}
+                        </span>
+    </div>
+</li>
