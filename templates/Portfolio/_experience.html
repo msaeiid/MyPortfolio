@@ -1,0 +1,12 @@
+<div class="resume-item d-flex flex-column flex-md-row mb-5">
+    <div class="resume-content mr-auto">
+        <h3 class="mb-0">{{ object.title }}</h3>
+        <div class="subheading mb-3">{{ object.industry }}</div>
+        <p>{{ object.description }}</p>
+    </div>
+    <div class="resume-date text-md-right">
+                        <span class="text-primary">{{ object.start_month }} {{ object.start_year }} -
+                            {% if object.is_present %} Present {% else %} {{ object.end_month }}
+                                {{ object.end_year }} {% endif %}</span>
+    </div>
+</div>

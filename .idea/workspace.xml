@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Some bug fixes">
-      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_execise.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Portfolio/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_execise.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/experience.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708276466600</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Some bug fixes">
+      <option name="closed" value="true" />
+      <created>1708277223253</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708277223253</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +264,11 @@
           <url>file://$PROJECT_DIR$/templates/Portfolio/base.html</url>
           <line>34</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Portfolio/views.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

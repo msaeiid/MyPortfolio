@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
 from Portfolio.forms import AboutForm, ProfileForm, InterestForm
-from Portfolio.models import Portfolio, Experience
+from Portfolio.models import Portfolio, Experience, Certificate, Skill, Language, Education
 
 
 class PortfolioView(TemplateView):
@@ -69,13 +69,14 @@ class InterestsView(LoginRequiredMixin, TemplateView):
         return redirect(reverse_lazy('home'))
 
 
-class ExperiencesView(LoginRequiredMixin, TemplateView):
-    model = Experience
-    template_name = 'Portfolio/experience.html'
+class UpdateView(LoginRequiredMixin, TemplateView):
+    template_name = 'Portfolio/update.html'
 
     def get(self, request, *args, **kwargs):
-        experiences = get_list_or_404(self.model, portfolio=request.user.portfolio)
-        context = {'experiences': experiences}
+        class_name = str.capitalize(request.path.replace('/', ''))
+        model = eval(class_name)
+        objects = get_list_or_404(model, portfolio=request.user.portfolio)
+        context = {'objects': objects, 'template': request.path.replace('/', '')}
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):
