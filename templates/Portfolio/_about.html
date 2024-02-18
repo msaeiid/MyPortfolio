@@ -10,7 +10,7 @@
             ·
             <i class="fa fa-envelope" aria-hidden="true"></i> <a
                     href="mailto:name@email.com">{{ portfolio.user.email }}</a> · <i class="fa fa-map-marker"
-                                                                                     aria-hidden="true"></i> {{ portfolio.postal_code }} {{ portfolio.street_address }} {{ portfolio.city }} {{ portfolio.country }}
+                                                                                     aria-hidden="true"></i> {{ portfolio.postal_code }} · {{ portfolio.street_address }} · {{ portfolio.city }} · {{ portfolio.country }}
         </div>
         <p class="mb-5">{{ portfolio.professional_summary }}</p>
         <ul class="list-inline list-social-icons mb-0">
@@ -61,7 +61,7 @@
                     data-target=".about_me_modal">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </button>
-            <div class="modal fade about_me_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            <div class="modal fade about_me_modal" tabindex="-1" role="form" aria-labelledby="myLargeModalLabel"
                  aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
