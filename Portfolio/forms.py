@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.forms import ModelForm, SelectDateWidget, NumberInput
+from django.forms import ModelForm
 from Portfolio.models import Portfolio
 
 
@@ -19,8 +19,7 @@ class AboutForm(ModelForm):
             'linkedin',
             'github',
             'twitter',
-            'facebook',
-            'interests', ]
+            'facebook', ]
 
     birth_date = forms.DateField(
         widget=forms.DateInput(attrs={'type': 'date'}))
@@ -38,5 +37,16 @@ class ProfileForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(ProfileForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+
+class InterestForm(ModelForm):
+    class Meta:
+        model = Portfolio
+        fields = ['interests', ]
+
+    def __init__(self, *args, **kwargs):
+        super(InterestForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'

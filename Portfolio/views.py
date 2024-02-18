@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
-from Portfolio.forms import AboutForm, ProfileForm
+from Portfolio.forms import AboutForm, ProfileForm, InterestForm
 from Portfolio.models import Portfolio
 
 
@@ -17,8 +17,10 @@ class PortfolioView(TemplateView):
         portfolio = get_object_or_404(Portfolio, user__username=kwargs.get('pk', 'admin'))
 
         context = {'portfolio': portfolio,
-                   'about_form': AboutForm(instance=request.user.portfolio, ),
-                   'profile_form': ProfileForm(instance=request.user)}
+                   'about_form': AboutForm(instance=request.user.portfolio),
+                   'profile_form': ProfileForm(instance=request.user),
+                   'interest_form': InterestForm(instance=request.user.portfolio),
+                   }
         return self.render_to_response(context)
 
 
@@ -53,3 +55,15 @@ class ProfileView(LoginRequiredMixin, TemplateView):
         if not request.user.is_superuser:
             raise PermissionDenied
         return super(ProfileView, self).dispatch(request, *args, **kwargs)
+
+
+class InterestsView(LoginRequiredMixin, TemplateView):
+    model = Portfolio
+    template_name = 'Portfolio/index.html'
+
+    def post(self, request, *args, **kwargs):
+        instance = get_object_or_404(Portfolio, user=request.user)
+        form = InterestForm(request.POST or None, instance=instance)
+        if form.is_valid():
+            form.save()
+        return redirect(reverse_lazy('home'))
