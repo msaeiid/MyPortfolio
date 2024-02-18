@@ -108,7 +108,7 @@ class Language(models.Model):
 
 class Portfolio(models.Model):
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
-    birth_date = models.DateField(_('Birth date'), blank=True, null=True)
+    birth_date = models.DateField(_('Birth date'), blank=True, null=True, default=datetime.today)
     phone_number = models.CharField(_('Phone number'), max_length=20, blank=True, null=True)
     country = models.CharField(_('Province or country'), max_length=10, blank=True, null=True)
     city = models.CharField(_('City'), max_length=10, blank=True, null=True)

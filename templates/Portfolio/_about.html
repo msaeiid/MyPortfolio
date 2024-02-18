@@ -10,7 +10,8 @@
             ·
             <i class="fa fa-envelope" aria-hidden="true"></i> <a
                     href="mailto:name@email.com">{{ portfolio.user.email }}</a> · <i class="fa fa-map-marker"
-                                                                                     aria-hidden="true"></i> {{ portfolio.postal_code }} · {{ portfolio.street_address }} · {{ portfolio.city }} · {{ portfolio.country }}
+                                                                                     aria-hidden="true"></i> {{ portfolio.postal_code }}
+            · {{ portfolio.street_address }} · {{ portfolio.city }} · {{ portfolio.country }}
         </div>
         <p class="mb-5">{{ portfolio.professional_summary }}</p>
         <ul class="list-inline list-social-icons mb-0">
@@ -73,100 +74,7 @@
                         <div class="modal-body">
                             <form method="post" action="{% url 'about_edit' %}" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                <div class="flex-container">
-                                    <label for="id_avatar">Avatar:</label>
-                                    {% if portfolio.avatar %}
-                                        <p class="file-upload">Currently: <a
-                                            href="{{ portfolio.avatar.url }}">{{ portfolio.avatar.url }}</a>
-                                        <span class="clearable-file-input">
-                                                                    <input type="checkbox" name="avatar-clear"
-                                                                           id="avatar-clear_id"
-                                                                           accept="image/*">
-                                <label for="avatar-clear_id">Clear</label></span><br>
-                                    {% endif %}
-                                    Change:
-                                    <input type="file" name="avatar" accept="image/*" id="id_avatar"></p>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone_number">Phone number</label>
-                                    <input type="tel" class="form-control" id="phone_number"
-                                           value="{{ portfolio.phone_number }}"
-                                           name="phone_number"
-                                           placeholder="phone number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mobile">Street address</label>
-                                    <input type="text" class="form-control" id="street_address"
-                                           value="{{ portfolio.street_address }}"
-                                           name="street_address"
-                                           placeholder="street address">
-                                </div>
-                                <div class="form-group">
-                                    <label for="postal_code">Postal code</label>
-                                    <input type="text" class="form-control" id="postal_code"
-                                           value="{{ portfolio.postal_code }}"
-                                           name="postal_code"
-                                           placeholder="postal code">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mobile">Birth date</label>
-                                    <input type="date" class="form-control" id="birth_date"
-                                           value="{{ portfolio.get_birth_date }}"
-                                           name="birth_date"
-                                           placeholder="birth date">
-                                </div>
-                                <div class="form-group">
-                                    <label for="mobile">Country</label>
-                                    <input type="text" class="form-control" id="country"
-                                           value="{{ portfolio.country }}"
-                                           name="country"
-                                           placeholder="country">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="mobile">City</label>
-                                    <input type="text" class="form-control" id="city"
-                                           value="{{ portfolio.city }}"
-                                           name="city"
-                                           placeholder="city">
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="professional_summary">Professional summary</label>
-                                    <textarea class="form-control" id="professional_summary"
-                                              name="professional_summary"
-                                              rows="3">{{ portfolio.professional_summary }}</textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="linkedin">Linkedin</label>
-                                    <input type="url" class="form-control" id="linkedin"
-                                           value="{{ portfolio.linkedin }}"
-                                           name="linkedin"
-                                           placeholder="linkedin">
-                                </div>
-                                <div class="form-group">
-                                    <label for="linkedin">Github</label>
-                                    <input type="url" class="form-control" id="github"
-                                           value="{{ portfolio.github }}"
-                                           name="github"
-                                           placeholder="github">
-                                </div>
-                                <div class="form-group">
-                                    <label for="twitter">Twitter</label>
-                                    <input type="url" class="form-control" id="twitter"
-                                           value="{{ portfolio.twitter }}"
-                                           name="twitter"
-                                           placeholder="twitter">
-                                </div>
-                                <div class="form-group">
-                                    <label for="facebook">Facebook</label>
-                                    <input type="url" class="form-control" id="facebook"
-                                           value="{{ portfolio.facebook }}"
-                                           name="facebook"
-                                           placeholder="facebook">
-                                </div>
+                                {{ about_form }}
                                 <input type="submit" class="btn btn-lg btn-success float-right"
                                        value="Save changes"/>
                             </form>
