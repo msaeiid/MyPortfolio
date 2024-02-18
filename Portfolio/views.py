@@ -1,12 +1,12 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.exceptions import PermissionDenied
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, get_list_or_404, render
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
 from Portfolio.forms import AboutForm, ProfileForm, InterestForm
-from Portfolio.models import Portfolio
+from Portfolio.models import Portfolio, Experience
 
 
 class PortfolioView(TemplateView):
@@ -67,3 +67,16 @@ class InterestsView(LoginRequiredMixin, TemplateView):
         if form.is_valid():
             form.save()
         return redirect(reverse_lazy('home'))
+
+
+class ExperiencesView(LoginRequiredMixin, TemplateView):
+    model = Experience
+    template_name = 'Portfolio/experience.html'
+
+    def get(self, request, *args, **kwargs):
+        experiences = get_list_or_404(self.model, portfolio=request.user.portfolio)
+        context = {'experiences': experiences}
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        pass
