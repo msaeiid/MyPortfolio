@@ -16,7 +16,9 @@ class PortfolioView(TemplateView):
     def get(self, request, *args, **kwargs):
         portfolio = get_object_or_404(Portfolio, user__username=kwargs.get('pk', 'admin'))
 
-        context = {'portfolio': portfolio, 'about_form': AboutForm(instance=request.user.portfolio)}
+        context = {'portfolio': portfolio,
+                   'about_form': AboutForm(instance=request.user.portfolio, ),
+                   'profile_form': ProfileForm(instance=request.user)}
         return self.render_to_response(context)
 
 

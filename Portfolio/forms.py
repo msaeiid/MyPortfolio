@@ -35,3 +35,8 @@ class ProfileForm(ModelForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email', ]
+
+    def __init__(self, *args, **kwargs):
+        super(ProfileForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'

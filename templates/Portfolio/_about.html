@@ -4,8 +4,7 @@
             <span class="text-primary">{{ portfolio.user.last_name }}</span>
         </h1>
         <div class="subheading mb-5"><i class="fa fa-birthday-cake"
-                                        aria-hidden="true"></i> {{ portfolio.birth_date.month }}
-            <sup>st</sup> {{ portfolio.birth_date.day }} {{ portfolio.birth_date.year }} · <i class="fa fa-mobile"
+                                        aria-hidden="true"></i> {{ portfolio.birth_date |date:"d M Y" }}  · <i class="fa fa-mobile"
                                                                                               aria-hidden="true"></i> {{ portfolio.phone_number }}
             ·
             <i class="fa fa-envelope" aria-hidden="true"></i> <a
