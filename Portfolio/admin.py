@@ -26,7 +26,7 @@ class CertificateAdmin(admin.ModelAdmin):
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
-    list_display = ('portfolio', 'title')
+    list_display = ('portfolio',)
 
 
 @admin.register(Language)

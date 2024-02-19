@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.forms import ModelForm
-from Portfolio.models import Portfolio, Certificate, Experience, Education
+from Portfolio.models import Portfolio, Certificate, Experience, Education, Skill
 
 
 class AboutForm(ModelForm):
@@ -84,5 +84,16 @@ class EducationForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(EducationForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+
+class SkillForm(ModelForm):
+    class Meta:
+        model = Skill
+        fields = ['title', ]
+
+    def __init__(self, *args, **kwargs):
+        super(SkillForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'

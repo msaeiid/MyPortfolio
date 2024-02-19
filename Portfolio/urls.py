@@ -21,5 +21,10 @@ urlpatterns = [
     path('education/', UpdateView.as_view(), name='education'),
     path('education/add', UpdateView.as_view(), name='education_add'),
     path('education/update/<int:pk>', UpdateView.as_view(), name='education_update'),
+
+    path('skill/', UpdateView.as_view(), name='skill'),
+    path('skill/add', UpdateView.as_view(), name='skill_add'),
+    path('skill/update/<int:pk>', UpdateView.as_view(), name='skill_update'),
+
     path('logout/', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
 ]

@@ -6,7 +6,8 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib import messages
 
-from Portfolio.forms import AboutForm, ProfileForm, InterestForm, CertificateForm, EducationForm, ExperienceForm
+from Portfolio.forms import AboutForm, ProfileForm, InterestForm, CertificateForm, EducationForm, ExperienceForm, \
+    SkillForm
 from Portfolio.models import Portfolio, Experience, Certificate, Skill, Language, Education
 
 
