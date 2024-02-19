@@ -6,14 +6,10 @@
 
 {% block navbar %}
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a href="{% url 'home' %}" class="btn btn-primary float-right">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        </a>
     </nav>
 {% endblock navbar %}
 {% block body %}
     <div class="container">
-        {% include 'Portfolio/_modal.html' %}
         <section class="resume-section p-3 p-lg-5 flex-column" id="experience">
             <div class="my-auto">
                 {% if template == 'experience' %}
