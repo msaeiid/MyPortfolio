@@ -1,6 +1,15 @@
 {% extends 'Portfolio/base.html' %}
 
 {% block body %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <div class="alert alert-primary" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <div class="modal fade profile_update_modal" tabindex="-1" role="form" aria-labelledby="myLargeModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -217,7 +226,7 @@
             <p class="mb-0">{{ portfolio.interests }}</p>
         </div>
     </section>
-    
+
     {% include 'Portfolio/_certificate.html' %}
 
 {% endblock body %}

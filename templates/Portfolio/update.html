@@ -9,6 +9,15 @@
     </nav>
 {% endblock navbar %}
 {% block body %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <div class="alert alert-primary" role="alert">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </ul>
+    {% endif %}
     <div class="container">
         <section class="resume-section p-3 p-lg-5 flex-column" id="experience">
             <div class="my-auto">

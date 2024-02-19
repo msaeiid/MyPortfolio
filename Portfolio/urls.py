@@ -10,8 +10,10 @@ urlpatterns = [
     path('profile/', ProfileView.as_view(), name='profile'),
     path('interest/', InterestsView.as_view(), name='interest'),
     path('experience/', UpdateView.as_view(), name='experience'),
+    path('experience/add', UpdateView.as_view(), name='experience_add'),
     path('certificate/', UpdateView.as_view(), name='certificate'),
+    path('certificate/add', UpdateView.as_view(), name='certificate_add'),
     path('education/', UpdateView.as_view(), name='education'),
-
+    path('education/add', UpdateView.as_view(), name='education_add'),
     path('logout/', LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
 ]
