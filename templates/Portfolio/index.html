@@ -120,9 +120,7 @@
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
             <h2 class="mb-5">Experience</h2>
-            {% for object in portfolio.experience_set.all %}
-                {% include 'Portfolio/_experience.html' %}
-            {% endfor %}
+            {% include 'Portfolio/_experience.html' %}
         </div>
     </section>
 
@@ -132,10 +130,7 @@
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
             <h2 class="mb-5">Education</h2>
-            {% for object in portfolio.education_set.all %}
-                {% include 'Portfolio/_education.html' %}
-            {% endfor %}
-
+            {% include 'Portfolio/_education.html' %}
         </div>
     </section>
 
@@ -245,12 +240,7 @@
             </a>
             <h2 class="mb-5">Awards &amp; Certifications</h2>
             <ul class="fa-ul mb-0">
-
-                {% for object in portfolio.certificate_set.all %}
-                    <li>
-                        {% include 'Portfolio/_certificate.html' %}
-                    </li>
-                {% endfor %}
+                {% include 'Portfolio/_certificate.html' %}
             </ul>
         </div>
     </section>

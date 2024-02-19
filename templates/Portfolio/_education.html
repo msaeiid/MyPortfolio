@@ -1,12 +1,14 @@
-<div class="resume-item d-flex flex-column flex-md-row mb-5">
-    <div class="resume-content mr-auto">
-        <h3 class="mb-0">{{ object.school }}</h3>
-        <div class="subheading mb-3">{{ object.degree }}</div>
-        <div>{{ object.field_of_study }}</div>
-        <p>GPA: {{ object.grade }}</p>
-        <p>{{ object.description }}</p>
+{% for object in objects %}
+    <div class="resume-item d-flex flex-column flex-md-row mb-5">
+        <div class="resume-content mr-auto">
+            <h3 class="mb-0">{{ object.school }}</h3>
+            <div class="subheading mb-3">{{ object.degree }}</div>
+            <div>{{ object.field_of_study }}</div>
+            <p>GPA: {{ object.grade }}</p>
+            <p>{{ object.description }}</p>
+        </div>
+        <div class="resume-date text-md-right">
+            <span class="text-primary">{{ object.start_month }} {{ object.start_year }} - {{ object.end_month }} {{ object.end_year }}</span>
+        </div>
     </div>
-    <div class="resume-date text-md-right">
-        <span class="text-primary">{{ object.start_month }} {{ object.start_year }} - {{ object.end_month }} {{ object.end_year }}</span>
-    </div>
-</div>
+{% endfor %}

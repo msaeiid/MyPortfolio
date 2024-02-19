@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, redirect, get_list_or_404, rende
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 
-from Portfolio.forms import AboutForm, ProfileForm, InterestForm
+from Portfolio.forms import AboutForm, ProfileForm, InterestForm, CertificateForm, EducationForm, ExperienceForm
 from Portfolio.models import Portfolio, Experience, Certificate, Skill, Language, Education
 
 
@@ -76,7 +76,8 @@ class UpdateView(LoginRequiredMixin, TemplateView):
         class_name = str.capitalize(request.path.replace('/', ''))
         model = eval(class_name)
         objects = get_list_or_404(model, portfolio=request.user.portfolio)
-        context = {'objects': objects, 'template': request.path.replace('/', '')}
+        form = eval(f'{class_name}Form')
+        context = {'objects': objects, 'form': form, 'template': request.path.replace('/', '')}
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):

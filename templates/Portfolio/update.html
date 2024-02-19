@@ -8,17 +8,16 @@
 {% endblock navbar %}
 {% block body %}
     <div class="container">
+        {% include 'Portfolio/_modal.html' %}
         <section class="resume-section p-3 p-lg-5 flex-column" id="experience">
             <div class="my-auto">
-                {% for object in objects %}
-                    {% if template == 'experience' %}
-                        {% include 'Portfolio/_experience.html' %}
-                    {% elif template == 'education' %}
-                        {% include 'Portfolio/_education.html' %}
-                    {% elif template == 'certificate' %}
-                        {% include 'Portfolio/_certificate.html' %}
-                    {% endif %}
-                {% endfor %}
+                {% if template == 'experience' %}
+                    {% include 'Portfolio/_experience.html' %}
+                {% elif template == 'education' %}
+                    {% include 'Portfolio/_education.html' %}
+                {% elif template == 'certificate' %}
+                    {% include 'Portfolio/_certificate.html' %}
+                {% endif %}
             </div>
         </section>
     </div>

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.forms import ModelForm
-from Portfolio.models import Portfolio
+from Portfolio.models import Portfolio, Certificate, Experience, Education
 
 
 class AboutForm(ModelForm):
@@ -48,5 +48,41 @@ class InterestForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(InterestForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+
+class CertificateForm(ModelForm):
+    class Meta:
+        model = Certificate
+        fields = ['name', 'issuing_organization', 'issue_year', 'issue_month', 'expiration_year', 'expiration_month',
+                  'Credential_id', 'credential_url']
+
+    def __init__(self, *args, **kwargs):
+        super(CertificateForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+
+class ExperienceForm(ModelForm):
+    class Meta:
+        model = Experience
+        fields = ['title', 'company_name', 'city', 'country', 'start_year', 'start_month',
+                  'end_year', 'end_month', 'is_present', 'industry', 'description']
+
+    def __init__(self, *args, **kwargs):
+        super(ExperienceForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+
+class EducationForm(ModelForm):
+    class Meta:
+        model = Education
+        fields = ['school', 'degree', 'field_of_study', 'city', 'country', 'start_year', 'start_month',
+                  'end_year', 'end_month', 'grade', 'description']
+
+    def __init__(self, *args, **kwargs):
+        super(EducationForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
             visible.field.widget.attrs['class'] = 'form-control'
