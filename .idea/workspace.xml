@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Some improvement">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0003_skillslist_remove_skill_title_skill_title.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0004_remove_skill_title_delete_skillslist_skill_title.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_skills.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_skills.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +121,7 @@
       <workItem from="1708164128624" duration="21454000" />
       <workItem from="1708244152187" duration="496000" />
       <workItem from="1708326182943" duration="3925000" />
-      <workItem from="1708339428257" duration="25839000" />
+      <workItem from="1708339428257" duration="28773000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -347,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708360061716</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Some improvement">
+      <option name="closed" value="true" />
+      <created>1708369300194</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708369300194</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

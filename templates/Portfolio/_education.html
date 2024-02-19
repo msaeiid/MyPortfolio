@@ -12,6 +12,14 @@
         {% endif %}
         <h2 class="mb-5">Education</h2>
         {% for object in portfolio.education_set.all %}
+            {% if is_update_page %}
+                <div class="btn-group btn-group-sm" role="group">
+                    {% include 'Portfolio/_update_modal.html' %}
+                    <a href="{% url 'education_delete' pk=object.pk %}" class="btn btn-warning">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </div>
+            {% endif %}
             <div class="resume-item d-flex flex-column flex-md-row mb-5">
                 <div class="resume-content mr-auto">
                     <h3 class="mb-0">{{ object.school }}</h3>
@@ -23,9 +31,6 @@
                 <div class="resume-date text-md-right">
                     <span class="text-primary">{{ object.start_month }} {{ object.start_year }} - {{ object.end_month }} {{ object.end_year }}</span>
                 </div>
-                {% if is_update_page %}
-                    {% include 'Portfolio/_update_modal.html' %}
-                {% endif %}
             </div>
         {% endfor %}
     </div>

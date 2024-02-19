@@ -14,9 +14,18 @@
 
         <div class="subheading mb-3">Programming Languages &amp; Tools</div>
         <ul class="list-inline list-icons">
-            {% for skill in portfolio.skill_set.all %}
+            {% for object in portfolio.skill_set.all %}
                 <li class="list-inline-item">
-                    <i class="devicons devicons-{{ skill.title }}"></i>
+                    <i class="devicons devicons-{{ object.title }}"></i>
+                    {% if is_update_page %}
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a href="{% url 'skill_delete' pk=object.pk %}" class="btn btn-warning">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    {% endif %}
+
+
                 </li>
             {% endfor %}
         </ul>
