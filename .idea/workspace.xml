@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Some bug fixes">
-      <change afterPath="$PROJECT_DIR$/templates/Portfolio/_modal.html" afterDir="false" />
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Update page developed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/update.html" afterDir="false" />
     </list>
@@ -125,7 +124,8 @@
       <workItem from="1708162629629" duration="1473000" />
       <workItem from="1708164128624" duration="21454000" />
       <workItem from="1708244152187" duration="496000" />
-      <workItem from="1708326182943" duration="3159000" />
+      <workItem from="1708326182943" duration="3925000" />
+      <workItem from="1708339428257" duration="1089000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -247,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708280720218</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update page developed">
+      <option name="closed" value="true" />
+      <created>1708329516229</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708329516230</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,20 +271,21 @@
     <MESSAGE value="Some improvement" />
     <MESSAGE value="interest update developed" />
     <MESSAGE value="Some bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some bug fixes" />
+    <MESSAGE value="Update page developed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update page developed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/Portfolio/base.html</url>
-          <line>34</line>
+          <line>36</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Portfolio/views.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="33" />
+          <line>79</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

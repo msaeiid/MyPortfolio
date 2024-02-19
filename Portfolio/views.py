@@ -74,10 +74,11 @@ class UpdateView(LoginRequiredMixin, TemplateView):
 
     def get(self, request, *args, **kwargs):
         class_name = str.capitalize(request.path.replace('/', ''))
-        model = eval(class_name)
-        objects = get_list_or_404(model, portfolio=request.user.portfolio)
+        # model = eval(class_name)
+        # objects = get_list_or_404(model, portfolio=request.user.portfolio)
         form = eval(f'{class_name}Form')
-        context = {'objects': objects, 'form': form, 'template': request.path.replace('/', '')}
+        context = {'portfolio': request.user.portfolio, 'form': form, 'template': request.path.replace('/', ''),
+                   'is_update_page': True}
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):

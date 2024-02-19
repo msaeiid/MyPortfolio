@@ -11,7 +11,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ user.get_full_name }}</title>
+    {% block title %}
+        <title>{{ user.get_full_name }}</title>
+    {% endblock title %}
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
