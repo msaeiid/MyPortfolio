@@ -18,14 +18,12 @@
                         {% include 'Portfolio/_update_modal.html' %}
                     {% endif %}
                     <i class="fa-li fa fa-trophy text-warning"></i>
-                    <a href="{{ object.credential_url }}">{{ object.name }}</a>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">{{ object.issue_month }} {{ object.issue_year }}
-                            {% if object.issue_month and object.issue_year and object.expiration_month and object.expiration_year %}
-                                - {{ object.expiration_month }} {{ object.expiration_year }}
-                            {% endif %}
+                    <a href="{{ object.credential_url }}">{{ object.name }} · {{ object.issuing_organization }}</a> ·
+                    <span class="text-primary">{{ object.issue_month }} {{ object.issue_year }}
+                        {% if object.issue_month and object.issue_year and object.expiration_month and object.expiration_year %}
+                            - {{ object.expiration_month }} {{ object.expiration_year }}
+                        {% endif %}
                         </span>
-                    </div>
                 </li>
             {% endfor %}
         </ul>
