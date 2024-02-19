@@ -8,7 +8,7 @@
             <a href="{% url 'home' %}#experience" class="btn btn-primary">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
-            {% include 'Portfolio/_modal.html' with icon='fa fa-plus' %}
+            {% include 'Portfolio/_create_modal.html' %}
         {% endif %}
         <h2 class="mb-5">Experience</h2>
         {% for object in portfolio.experience_set.all %}
@@ -24,7 +24,7 @@
                                 {{ object.end_year }} {% endif %}</span>
                 </div>
                 {% if is_update_page %}
-                    {% include 'Portfolio/_modal.html' with icon='fa fa-pencil-square-o' %}
+                    {% include 'Portfolio/_update_modal.html' %}
                 {% endif %}
             </div>
         {% endfor %}

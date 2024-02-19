@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.exceptions import PermissionDenied
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import get_object_or_404, redirect, render, get_list_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
 from django.contrib import messages
@@ -83,11 +83,13 @@ class UpdateView(LoginRequiredMixin, TemplateView):
 
     def get(self, request, *args, **kwargs):
         class_name = str.capitalize(request.path.replace('/', ''))
-        # model = eval(class_name)
-        # objects = get_list_or_404(model, portfolio=request.user.portfolio)
+        model = eval(class_name)
+        objects = get_list_or_404(model, portfolio=request.user.portfolio)
         form = eval(f'{class_name}Form')
+        update_forms = {obj.id: form(instance=obj) for obj in objects}
         context = {'portfolio': request.user.portfolio,
                    'form': form,
+                   'update_forms': update_forms,
                    'template': request.path.replace('/', ''),
                    'url': request.path,
                    'is_update_page': True}
