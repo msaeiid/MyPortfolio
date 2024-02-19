@@ -13,13 +13,15 @@ class AboutForm(ModelForm):
             'phone_number',
             'country',
             'city',
+            'hide_sensitive',
             'postal_code',
             'street_address',
             'professional_summary',
             'linkedin',
             'github',
             'twitter',
-            'facebook', ]
+            'facebook',
+        ]
 
     birth_date = forms.DateField(
         widget=forms.DateInput(attrs={'type': 'date'}))

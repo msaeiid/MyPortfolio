@@ -177,6 +177,7 @@ class Portfolio(models.Model):
     twitter = models.URLField(_('Twitter'), blank=True, null=True)
     facebook = models.URLField(_('Facebook'), blank=True, null=True)
     interests = models.TextField(_('Interests'), blank=True, null=True)
+    hide_sensitive = models.BooleanField(_('Hide Sensitive'), default=False)
     # Relations
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
