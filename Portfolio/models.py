@@ -65,7 +65,7 @@ class Education(models.Model):
 
 class Certificate(models.Model):
     name = models.CharField(_('Name'), max_length=50, blank=False)
-    issuing_organization = models.CharField(_('Issuing Organization'), max_length=20, blank=False)
+    issuing_organization = models.CharField(_('Issuing Organization'), max_length=50, blank=False)
     issue_year = models.IntegerField(_('Issue Year'), choices=Year_Choices, blank=True, null=True)
     issue_month = models.CharField(_('Issue Month'), choices=Month_CHOICES, blank=True, null=True, max_length=10)
     expiration_year = models.IntegerField(_('Expiration Year'), choices=Year_Choices, blank=True, null=True)

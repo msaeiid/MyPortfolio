@@ -84,7 +84,7 @@ class UpdateView(LoginRequiredMixin, TemplateView):
     def get(self, request, *args, **kwargs):
         class_name = str.capitalize(request.path.replace('/', ''))
         model = eval(class_name)
-        objects = get_list_or_404(model, portfolio=request.user.portfolio)
+        objects = model.objects.filter(portfolio=request.user.portfolio)
         form = eval(f'{class_name}Form')
         update_forms = {obj.id: form(instance=obj) for obj in objects}
         context = {'portfolio': request.user.portfolio,
