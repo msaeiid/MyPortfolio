@@ -8,12 +8,15 @@
             <a href="{% url 'home' %}#awards" class="btn btn-primary">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
-            {% include 'Portfolio/_modal.html' %}
+            {% include 'Portfolio/_modal.html' with icon='fa fa-plus' %}
         {% endif %}
         <h2 class="mb-5">Awards &amp; Certifications</h2>
         <ul class="fa-ul mb-0">
             {% for object in portfolio.certificate_set.all %}
                 <li>
+                    {% if is_update_page %}
+                        {% include 'Portfolio/_modal.html' with icon='fa fa-pencil-square-o' %}
+                    {% endif %}
                     <i class="fa-li fa fa-trophy text-warning"></i>
                     <a href="{{ object.credential_url }}">{{ object.name }}</a>
                     <div class="resume-date text-md-right">

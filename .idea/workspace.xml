@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Update page developed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_modal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <workItem from="1708164128624" duration="21454000" />
       <workItem from="1708244152187" duration="496000" />
       <workItem from="1708326182943" duration="3925000" />
-      <workItem from="1708339428257" duration="1758000" />
+      <workItem from="1708339428257" duration="2488000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -260,7 +258,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708340552431</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update page developed">
+      <option name="closed" value="true" />
+      <created>1708341278020</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708341278020</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Update page developed">
+      <option name="closed" value="true" />
+      <created>1708341337966</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708341337966</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
