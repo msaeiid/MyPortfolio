@@ -83,16 +83,22 @@ class UpdateView(LoginRequiredMixin, TemplateView):
     template_name = 'Portfolio/update.html'
 
     def get(self, request, *args, **kwargs):
-        class_name = str.capitalize(request.path.replace('/', ''))
-        model = eval(class_name)
+        extracted_data = str.capitalize(request.path.replace('/', ' ')).strip().split(' ')
+        model = eval(extracted_data[0].capitalize())
+        if len(extracted_data) > 1:
+            operation = extracted_data[1]
+            pk = int(extracted_data[2])
+            if operation == 'delete':
+                model.objects.get(pk=pk).delete()
+                messages.success(request, f'{model} has been deleted')
         objects = model.objects.filter(portfolio=request.user.portfolio)
-        form = eval(f'{class_name}Form')
+        form = eval(f'{extracted_data[0].capitalize()}Form')
         update_forms = {obj.id: form(instance=obj) for obj in objects}
         context = {'portfolio': request.user.portfolio,
                    'form': form,
                    'update_forms': update_forms,
-                   'template': request.path.replace('/', ''),
-                   'url': request.path,
+                   'template': extracted_data[0],
+                   'url': f'/{extracted_data[0]}',
                    'is_update_page': True}
         return render(request, self.template_name, context)
 
@@ -109,7 +115,7 @@ class UpdateView(LoginRequiredMixin, TemplateView):
                 obj = model.objects.create(**form.cleaned_data)
                 messages.success(request, f'{obj} has been updated to {extracted_data[0]}')
         elif operation == 'update':
-            pk = extracted_data[2]
+            pk = int(extracted_data[2])
             instance = model.objects.get(pk=pk)
             form = form(request.POST or None, instance=instance)
             if form.is_valid():
