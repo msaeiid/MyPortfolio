@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Final step">
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0005_portfolio_hide_sensitive_alter_skill_title.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_create_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_create_modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_skills.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.MyPortfolio.executor": "Run",
+    "Django Server.MyPortfolio.executor": "Debug",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -124,7 +126,8 @@
       <workItem from="1708244152187" duration="496000" />
       <workItem from="1708326182943" duration="3925000" />
       <workItem from="1708339428257" duration="31031000" />
-      <workItem from="1708375156816" duration="4132000" />
+      <workItem from="1708375156816" duration="4184000" />
+      <workItem from="1708412755750" duration="3612000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -366,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708377448285</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Final step">
+      <option name="closed" value="true" />
+      <created>1708379881955</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708379881955</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +404,21 @@
           <url>file://$PROJECT_DIR$/templates/Portfolio/base.html</url>
           <line>36</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/Portfolio/index.html</url>
+          <line>96</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Portfolio/views.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Portfolio/views.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
