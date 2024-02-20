@@ -1,11 +1,11 @@
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
     <div class="my-auto">
         {% if not is_update_page and user.is_authenticated and perms.Portfolio.change_education %}
-            <a href="{% url 'education' %}" class="btn btn-primary float-right">
+            <a href="{% url 'education' %}" class="btn btn-warning float-right">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
         {% elif user.is_authenticated and perms.Portfolio.change_education %}
-            <a href="{% url 'home' %}#education" class="btn btn-primary">
+            <a href="{% url 'home' %}#education" class="btn btn-warning">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
             {% include 'Portfolio/_create_modal.html' %}
@@ -15,7 +15,7 @@
             {% if is_update_page %}
                 <div class="btn-group btn-group-sm" role="group">
                     {% include 'Portfolio/_update_modal.html' %}
-                    <a href="{% url 'education_delete' pk=object.pk %}" class="btn btn-warning">
+                    <a href="{% url 'education_delete' pk=object.pk %}" class="btn btn-danger">
                         <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </div>
