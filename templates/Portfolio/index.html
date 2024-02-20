@@ -23,12 +23,12 @@
                     <form method="post" action="{% url 'profile' %}">
                         {% csrf_token %}
                         {{ profile_form }}
-                        <input type="submit" class="btn btn-lg btn-success float-right"
+                        <input type="submit" class="btn btn-sm btn-success float-right mt-3"
                                value="Save changes"/>
                     </form>
                     <form action="{% url 'logout' %}" method="post">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-lg btn-warning">Log Out</button>
+                        <button type="submit" class="btn btn-sm btn-primary mt-3">Log Out</button>
                     </form>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             </h1>
             <div class="subheading mb-5">
                 {% if portfolio.resume %}
-                    <a href="{{ portfolio.resume.url }}">my resume</a> · 
+                    <a href="{{ portfolio.resume.url }}">resume</a> · 
                 {% endif %}
                 {{ portfolio.birth_date.day }} <sup>st</sup> {{ portfolio.birth_date |date:"M Y" }} ·
                 {% if not portfolio.hide_sensitive %}
@@ -115,7 +115,7 @@
                                 <form method="post" action="{% url 'about' %}" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     {{ about_form }}
-                                    <input type="submit" class="btn btn-lg btn-success float-right"
+                                    <input type="submit" class="btn btn-sm btn-success float-right mt-3"
                                            value="Save changes"/>
                                 </form>
                             </div>
@@ -152,7 +152,7 @@
                                 <form method="post" action="{% url 'interest' %}">
                                     {% csrf_token %}
                                     {{ interest_form }}
-                                    <input type="submit" class="btn btn-lg btn-success float-right"
+                                    <input type="submit" class="btn btn-sm btn-success float-right mt-3"
                                            value="Save changes"/>
                                 </form>
                             </div>
