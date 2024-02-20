@@ -178,6 +178,7 @@ class Portfolio(models.Model):
     facebook = models.URLField(_('Facebook'), blank=True, null=True)
     interests = models.TextField(_('Interests'), blank=True, null=True)
     hide_sensitive = models.BooleanField(_('Hide Sensitive'), default=False)
+    resume = models.FileField('Resume', upload_to='resume/')
     # Relations
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 

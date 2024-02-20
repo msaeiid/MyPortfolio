@@ -9,6 +9,7 @@ class AboutForm(ModelForm):
         model = Portfolio
         fields = [
             'avatar',
+            'resume',
             'birth_date',
             'phone_number',
             'country',
