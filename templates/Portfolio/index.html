@@ -36,7 +36,6 @@
     </div>
 
     <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-    {{ perms }}
         <div class="my-auto">
             <h1 class="mb-0">{{ portfolio.user.first_name }}
                 <span class="text-primary">{{ portfolio.user.last_name }}</span>
@@ -95,7 +94,7 @@
                     </li>
                 {% endif %}
             </ul>
-            {% if user.is_authenticated and  user.is_superuser %}
+            {% if user.is_authenticated and perms.Portfolio.change_portfolio %}
                 <button type="button" class="btn btn-primary float-right" data-toggle="modal"
                         data-target=".about_me_modal">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -132,7 +131,7 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
-            {% if user.is_authenticated and  user.is_superuser %}
+            {% if user.is_authenticated and perms.Portfolio.change_portfolio %}
                 <button type="button" class="btn btn-primary float-right" data-toggle="modal"
                         data-target=".interest_modal">
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>

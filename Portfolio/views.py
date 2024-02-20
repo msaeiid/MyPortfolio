@@ -1,4 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import User
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect, render, get_list_or_404
@@ -26,9 +26,11 @@ class PortfolioView(TemplateView):
         return self.render_to_response(context)
 
 
-class AboutView(LoginRequiredMixin, TemplateView):
+class AboutView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     model = Portfolio
     template_name = 'Portfolio/index.html'
+    permission_required = 'Portfolio.change_portfolio'
+    permission_denied_message = 'You do not have permission to change portfolio.'
 
     def post(self, request, *args, **kwargs):
         instance = get_object_or_404(Portfolio, user=request.user)
@@ -38,15 +40,12 @@ class AboutView(LoginRequiredMixin, TemplateView):
             messages.success(request, 'profile has been updated')
         return redirect(reverse_lazy('home'))
 
-    def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_superuser:
-            raise PermissionDenied
-        return super(AboutView, self).dispatch(request, *args, **kwargs)
 
-
-class ProfileView(LoginRequiredMixin, TemplateView):
+class ProfileView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     model = User
     template_name = 'Portfolio/index.html'
+    permission_required = 'User.change_user'
+    permission_denied_message = 'You do not have permission to change user.'
 
     def post(self, request, *args, **kwargs):
         form = ProfileForm(request.POST or None, instance=request.user)
@@ -55,15 +54,12 @@ class ProfileView(LoginRequiredMixin, TemplateView):
             messages.success(request, 'about section has been updated')
         return redirect(reverse_lazy('home'))
 
-    def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_superuser:
-            raise PermissionDenied
-        return super(ProfileView, self).dispatch(request, *args, **kwargs)
 
-
-class InterestsView(LoginRequiredMixin, TemplateView):
+class InterestsView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     model = Portfolio
     template_name = 'Portfolio/index.html'
+    permission_required = 'Portfolio.change_portfolio'
+    permission_denied_message = 'You do not have permission to change interest.'
 
     def post(self, request, *args, **kwargs):
         instance = get_object_or_404(Portfolio, user=request.user)
@@ -73,14 +69,14 @@ class InterestsView(LoginRequiredMixin, TemplateView):
             messages.success(request, 'interest section has been updated')
         return redirect(reverse_lazy('home'))
 
-    def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_superuser:
-            raise PermissionDenied
-        return super(InterestsView, self).dispatch(request, *args, **kwargs)
 
-
-class UpdateView(LoginRequiredMixin, TemplateView):
+class UpdateView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
     template_name = 'Portfolio/update.html'
+    permission_required = ['Portfolio.change_experience',
+                           'Portfolio.change_education',
+                           'Portfolio.change_skill',
+                           'Portfolio.change_certificate']
+    permission_denied_message = 'You do not have to Add or Change Experience, Education, Certificate and Skills'
 
     def get(self, request, *args, **kwargs):
         extracted_data = str.capitalize(request.path.replace('/', ' ')).strip().split(' ')
@@ -121,8 +117,3 @@ class UpdateView(LoginRequiredMixin, TemplateView):
             if form.is_valid():
                 form.save()
         return redirect(reverse_lazy(f'{extracted_data[0]}'))
-
-    def dispatch(self, request, *args, **kwargs):
-        if not request.user.is_superuser:
-            raise PermissionDenied
-        return super(UpdateView, self).dispatch(request, *args, **kwargs)
