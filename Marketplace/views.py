@@ -1,6 +1,7 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render
-from django.views.generic import TemplateView, DetailView
-
+from django.views.generic import TemplateView, DetailView, CreateView
+from Marketplace.forms import SignUpForm
 from Marketplace.models import Item, Category
 
 
@@ -29,3 +30,10 @@ class ItemDetail(DetailView):
         context['related_items'] = Item.objects.filter(category=context['item'].category, is_sold=False).exclude(
             pk=context['item'].pk)[0:3]
         return context
+
+
+class SignUp(CreateView):
+    model = User
+    form_class = SignUpForm
+    template_name = 'Marketplace/signup.html'
+    success_url = 'market/login'
