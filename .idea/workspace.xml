@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Portfolio has been developed and ready to deploy">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Portfolio/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/0002_alter_category_options_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Marketplace/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Marketplace/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Marketplace/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Marketplace/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_skills.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPortfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyPortfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +141,7 @@
       <workItem from="1708412755750" duration="13664000" />
       <workItem from="1708454159968" duration="9356000" />
       <workItem from="1708510012891" duration="1135000" />
+      <workItem from="1708534341637" duration="1194000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -501,6 +502,10 @@
           <url>file://$PROJECT_DIR$/Portfolio/views.py</url>
           <line>101</line>
           <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Marketplace/urls.py</url>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
