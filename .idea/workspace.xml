@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Portfolio has been developed and ready to deploy">
-      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/0002_alter_category_options_item.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Marketplace/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Marketplace/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Marketplace/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Marketplace/index.html" afterDir="false" />
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="The tutorial has already started">
+      <change afterPath="$PROJECT_DIR$/templates/Marketplace/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyPortfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyPortfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Marketplace/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,30 +42,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.MyPortfolio.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mskar/PycharmProjects/MyPortfolio/templates/Portfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.MyPortfolio.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/mskar/PycharmProjects/MyPortfolio/templates/Portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mskar\PycharmProjects\MyPortfolio\templates\Portfolio" />
@@ -141,7 +136,7 @@
       <workItem from="1708412755750" duration="13664000" />
       <workItem from="1708454159968" duration="9356000" />
       <workItem from="1708510012891" duration="1135000" />
-      <workItem from="1708534341637" duration="1194000" />
+      <workItem from="1708534341637" duration="5092000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -463,7 +458,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708465097913</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="The tutorial has already started">
+      <option name="closed" value="true" />
+      <created>1708536536593</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1708536536593</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +496,8 @@
     <MESSAGE value="Some improvement" />
     <MESSAGE value="Final step" />
     <MESSAGE value="Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final" />
+    <MESSAGE value="The tutorial has already started" />
+    <option name="LAST_COMMIT_MESSAGE" value="The tutorial has already started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -504,8 +508,9 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Marketplace/urls.py</url>
-          <option name="timeStamp" value="31" />
+          <url>file://$PROJECT_DIR$/Marketplace/views.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
