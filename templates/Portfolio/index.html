@@ -20,13 +20,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="{% url 'profile' %}">
+                    <form method="post" action="{% url 'Portfolio:profile' %}">
                         {% csrf_token %}
                         {{ profile_form }}
                         <input type="submit" class="btn btn-sm btn-success float-right mt-3"
                                value="Save changes"/>
                     </form>
-                    <form action="{% url 'logout' %}" method="post">
+                    <form action="{% url 'Portfolio:logout' %}" method="post">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-sm btn-primary mt-3">Log Out</button>
                     </form>
@@ -42,7 +42,7 @@
             </h1>
             <div class="subheading mb-5">
                 {% if portfolio.resume %}
-                    <a href="{{ portfolio.resume.url }}">resume</a> · 
+                    <a href="{{ portfolio.resume.url }}">resume</a> ·
                 {% endif %}
                 {{ portfolio.birth_date.day }} <sup>st</sup> {{ portfolio.birth_date |date:"M Y" }} ·
                 {% if not portfolio.hide_sensitive %}
@@ -112,7 +112,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form method="post" action="{% url 'about' %}" enctype="multipart/form-data">
+                                <form method="post" action="{% url 'Portfolio:about' %}" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     {{ about_form }}
                                     <input type="submit" class="btn btn-sm btn-success float-right mt-3"
@@ -149,7 +149,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form method="post" action="{% url 'interest' %}">
+                                <form method="post" action="{% url 'Portfolio:interest' %}">
                                     {% csrf_token %}
                                     {{ interest_form }}
                                     <input type="submit" class="btn btn-sm btn-success float-right mt-3"

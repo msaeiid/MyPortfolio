@@ -4,6 +4,7 @@ from django.urls import path
 from MyPortfolio import settings
 from Portfolio.views import PortfolioView, AboutView, ProfileView, InterestsView, UpdateView
 
+app_name = 'Portfolio'
 urlpatterns = [
     path('', PortfolioView.as_view(), name='home'),
     path('about/', AboutView.as_view(), name='about'),

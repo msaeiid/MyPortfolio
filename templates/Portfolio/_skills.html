@@ -1,11 +1,11 @@
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
     <div class="my-auto">
         {% if not is_update_page and user.is_authenticated and  perms.Portfolio.change_skill %}
-            <a href="{% url 'skill' %}" class="btn btn-warning float-right">
+            <a href="{% url 'Portfolio:skill' %}" class="btn btn-warning float-right">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             </a>
         {% elif user.is_authenticated and perms.Portfolio.change_skill %}
-            <a href="{% url 'home' %}#skills" class="btn btn-warning">
+            <a href="{% url 'Portfolio:home' %}#skills" class="btn btn-warning">
                 <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </a>
             {% include 'Portfolio/_create_modal.html' %}
@@ -19,7 +19,7 @@
                     <i class="devicons devicons-{{ object.title }}"></i>
                     {% if is_update_page %}
                         <div class="btn-group btn-group-sm" role="group">
-                            <a href="{% url 'skill_delete' pk=object.pk %}" class="btn btn-danger">
+                            <a href="{% url 'Portfolio:skill_delete' pk=object.pk %}" class="btn btn-danger">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </a>
                         </div>
