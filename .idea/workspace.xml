@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Final">
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_create_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_create_modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_education.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_skills.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_update_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/_update_modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +129,7 @@
       <workItem from="1708339428257" duration="31031000" />
       <workItem from="1708375156816" duration="4184000" />
       <workItem from="1708412755750" duration="13664000" />
-      <workItem from="1708454159968" duration="8699000" />
+      <workItem from="1708454159968" duration="9356000" />
     </task>
     <task id="LOCAL-00001" summary="about update works fine">
       <option name="closed" value="true" />
@@ -442,7 +435,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708464415972</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Final">
+      <option name="closed" value="true" />
+      <created>1708465043484</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1708465043484</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Final">
+      <option name="closed" value="true" />
+      <created>1708465097913</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1708465097913</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
