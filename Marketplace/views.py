@@ -1,7 +1,9 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views.generic import TemplateView, DetailView, CreateView
-from Marketplace.forms import SignUpForm
+from Marketplace.forms import SignUpForm, AddItemForm
 from Marketplace.models import Item, Category
 
 
@@ -37,3 +39,18 @@ class SignUp(CreateView):
     form_class = SignUpForm
     template_name = 'Marketplace/signup.html'
     success_url = 'market/login'
+
+
+class AddItemView(LoginRequiredMixin, CreateView):
+    model = Item
+    template_name = 'Marketplace/add_item.html'
+    form_class = AddItemForm
+
+    def get_context_data(self, **kwargs):
+        context = super(AddItemView, self).get_context_data()
+        context['page_title'] = 'New Item'
+
+        return context
+
+    def get_success_url(self):
+        reverse_lazy('market:item_detail', kwargs={'pk': self.object.pk})

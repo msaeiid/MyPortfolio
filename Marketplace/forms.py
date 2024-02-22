@@ -1,6 +1,9 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django import forms
+from django.forms import ModelForm
+
+from Marketplace.models import Item
 
 
 class SignUpForm(UserCreationForm):
@@ -25,3 +28,19 @@ class LoginForm(AuthenticationForm):
 
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={'placeholder': 'Your password', 'class': 'w-full py-4 px-6 rounded-xl'}))
+
+
+INPUT_CLASSES = 'w-full py-4 px-6 rounded-xl border'
+
+
+class AddItemForm(ModelForm):
+    class Meta:
+        model = Item
+        fields = ['category', 'name', 'description', 'price', 'image']
+        widgets = {
+            'category': forms.Select(attrs={'class': INPUT_CLASSES}),
+            'name': forms.TextInput(attrs={'class': INPUT_CLASSES}),
+            'description': forms.Textarea(attrs={'class': INPUT_CLASSES}),
+            'price': forms.TextInput(attrs={'class': INPUT_CLASSES}),
+            'image': forms.FileInput(attrs={'class': INPUT_CLASSES}),
+        }
