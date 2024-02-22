@@ -53,4 +53,18 @@ class AddItemView(LoginRequiredMixin, CreateView):
         return context
 
     def get_success_url(self):
-        reverse_lazy('market:item_detail', kwargs={'pk': self.object.pk})
+        return reverse_lazy('Marketplace:item_detail', kwargs={'pk': self.object.id})
+
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super(AddItemView, self).form_valid(form)
+
+
+class DashboardView(TemplateView):
+    model = Item
+    template_name = 'Marketplace/dashboard/index.html'
+
+    def get(self, request, *args, **kwargs):
+        items = Item.objects.filter(created_by=request.user)
+
+        return render(request, self.template_name, {'items': items})
