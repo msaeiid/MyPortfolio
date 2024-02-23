@@ -153,3 +153,9 @@ class InboxView(LoginRequiredMixin, TemplateView):
 
         context = {'conversations': conversations}
         return render(request, self.template_name, context)
+
+
+class ConversationDetail(LoginRequiredMixin, DetailView):
+    model = Conversation
+    template_name = 'Marketplace/conversation_detail.html'
+    context_object_name = 'conversation'
