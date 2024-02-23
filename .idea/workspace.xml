@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="stable until 2:13:00">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/conversation_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/conversation_detail.html" afterDir="false" />
-    </list>
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="Learn Django by Building an Online Marketplace – Python Tutorial for Beginners&#10;Finished" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,15 +135,7 @@
       <workItem from="1708632170458" duration="4970000" />
       <workItem from="1708671752041" duration="1288000" />
       <workItem from="1708702106094" duration="7249000" />
-      <workItem from="1708717807355" duration="3242000" />
-    </task>
-    <task id="LOCAL-00011" summary="Some improvement">
-      <option name="closed" value="true" />
-      <created>1708265816071</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1708265816071</updated>
+      <workItem from="1708717807355" duration="3516000" />
     </task>
     <task id="LOCAL-00012" summary="interest update developed">
       <option name="closed" value="true" />
@@ -534,7 +521,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708719619106</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Learn Django by Building an Online Marketplace – Python Tutorial for Beginners&#10;Finished">
+      <option name="closed" value="true" />
+      <created>1708721196916</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1708721196916</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +569,8 @@
     <MESSAGE value="stable until 1:53:41" />
     <MESSAGE value="stable until 1:58:30" />
     <MESSAGE value="stable until 2:13:00" />
-    <option name="LAST_COMMIT_MESSAGE" value="stable until 2:13:00" />
+    <MESSAGE value="Learn Django by Building an Online Marketplace – Python Tutorial for Beginners&#10;Finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Learn Django by Building an Online Marketplace – Python Tutorial for Beginners&#10;Finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
