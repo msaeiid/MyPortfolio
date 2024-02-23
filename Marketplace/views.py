@@ -1,11 +1,11 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.db.models import Q
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView
-from Marketplace.forms import SignUpForm, AddItemForm, UpdateItemForm
-from Marketplace.models import Item, Category
+from Marketplace.forms import SignUpForm, AddItemForm, UpdateItemForm, MessageForm
+from Marketplace.models import Item, Category, Conversation
 
 
 class Index(TemplateView):
@@ -111,3 +111,34 @@ class DashboardView(TemplateView):
         items = Item.objects.filter(created_by=request.user)
 
         return render(request, self.template_name, {'items': items})
+
+
+class AddConversation(TemplateView):
+    template_name = 'Marketplace/new_conversation.html'
+
+    def post(self, request, *args, **kwargs):
+        item = get_object_or_404(Item, pk=kwargs.get('item_pk'))
+        if item.created_by == request.user:
+            return redirect('market:dashboard')
+
+        conversations = item.conversations.filter(members__in=[request.user.id])
+        if conversations:
+            pass  # redirect to conversation
+
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            conversation = Conversation.objects.create(item=item)
+            conversation.members.add(request.user)
+            conversation.members.add(item.created_by)
+            conversation.save()
+
+            message = form.save(commit=False)
+            message.conversation = conversation
+            message.created_by = request.user
+            message.save()
+
+            return redirect('Marketplace:item_detail', pk=item.pk)
+
+    def get(self, request, *args, **kwargs):
+        form = MessageForm()
+        return render(request, self.template_name, {'form': form})

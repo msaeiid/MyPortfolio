@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django import forms
 from django.forms import ModelForm
 
-from Marketplace.models import Item
+from Marketplace.models import Item, Message
 
 
 class SignUpForm(UserCreationForm):
@@ -55,4 +55,13 @@ class UpdateItemForm(ModelForm):
             'description': forms.Textarea(attrs={'class': INPUT_CLASSES}),
             'price': forms.TextInput(attrs={'class': INPUT_CLASSES}),
             'image': forms.FileInput(attrs={'class': INPUT_CLASSES}),
+        }
+
+
+class MessageForm(ModelForm):
+    class Meta:
+        model = Message
+        fields = ['content']
+        widgets = {
+            'content': forms.TextInput(attrs={'class': 'w-full py-4 px-6 rounded-xl border'})
         }

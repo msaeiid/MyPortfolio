@@ -39,8 +39,8 @@ class Conversation(models.Model):
     class Meta:
         ordering = ['-created_at', ]
 
-        def __str__(self):
-            return f'{self.item.name} - {self.created_at} - {self.modified_at}'
+    def __str__(self):
+        return f'{self.item.name}'
 
 
 class Message(models.Model):
@@ -50,4 +50,4 @@ class Message(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_messages')
 
     def __str__(self):
-        return f'{self.conversation.item.name} - {self.created_at} - {self.created_by}'
+        return f'{self.conversation.item.name} - {self.created_by}'
