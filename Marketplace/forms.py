@@ -46,7 +46,7 @@ class AddItemForm(ModelForm):
         }
 
 
-class EditItemForm(ModelForm):
+class UpdateItemForm(ModelForm):
     class Meta:
         model = Item
         fields = ['name', 'description', 'price', 'image', 'is_sold']

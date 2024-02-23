@@ -4,9 +4,8 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, DetailView, CreateView, DeleteView
-from Marketplace.forms import SignUpForm, AddItemForm, EditItemForm
+from Marketplace.forms import SignUpForm, AddItemForm
 from Marketplace.models import Item, Category
-from Portfolio.views import UpdateView
 
 
 class Index(TemplateView):
