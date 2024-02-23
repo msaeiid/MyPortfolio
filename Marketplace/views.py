@@ -1,10 +1,9 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, DetailView, CreateView, DeleteView
-from Marketplace.forms import SignUpForm, AddItemForm
+from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView
+from Marketplace.forms import SignUpForm, AddItemForm, UpdateItemForm
 from Marketplace.models import Item, Category
 
 
@@ -63,6 +62,17 @@ class DeleteItemView(LoginRequiredMixin, DeleteView):
         item = get_object_or_404(Item, pk=self.kwargs.get('pk', None), created_by=self.request.user)
         item.delete()
         return reverse_lazy(self.success_url)
+
+
+class UpdateItemView(LoginRequiredMixin, UpdateView):
+    model = Item
+    template_name = 'Marketplace/add_item.html'
+    form_class = UpdateItemForm
+
+    def get_context_data(self, **kwargs):
+        context = super(UpdateItemView, self).get_context_data()
+        context['page_title'] = 'Update'
+        return context
 
 
 class SignUp(CreateView):

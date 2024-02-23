@@ -2,10 +2,18 @@
 
 {% block title %}
     {{ page_title }}
+    {% if page_title == 'Update' %}
+        {{ item }}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
-    <h1 class="mb-6 text-3xl">{{ page_title }}</h1>
+    <h1 class="mb-6 text-3xl">
+        {{ page_title }}
+        {% if page_title == 'Update' %}
+            {{ item }}
+        {% endif %}
+    </h1>
 
     <form method="post" action="." enctype="multipart/form-data">
         {% csrf_token %}
@@ -18,9 +26,15 @@
                     {{ field.errors }}
                 {% endfor %}
                 {{ form.non_field_errors }}
-            </div> 
+            </div>
         {% endif %}
 
-        <button class="mt-6 py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Add</button>
+        <button class="mt-6 py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">
+            {% if page_title == 'Update' %}
+                Update
+            {% else %}
+                Add
+            {% endif %}
+        </button>
     </form>
 {% endblock %}

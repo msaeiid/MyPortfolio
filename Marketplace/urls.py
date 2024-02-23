@@ -2,7 +2,8 @@ from django.contrib.auth.views import LoginView
 from django.urls import path
 
 from Marketplace.forms import LoginForm
-from Marketplace.views import Index, Contact, ItemDetail, SignUp, AddItemView, DashboardView, DeleteItemView
+from Marketplace.views import Index, Contact, ItemDetail, SignUp, AddItemView, DashboardView, DeleteItemView, \
+    UpdateItemView
 
 app_name = 'Marketplace'
 
@@ -15,5 +16,6 @@ urlpatterns = [
          name='login'),
     path('add_item/', AddItemView.as_view(), name='add_item'),
     path('<int:pk>/delete_item', DeleteItemView.as_view(), name='delete_item'),
+    path('<int:pk>/update_item', UpdateItemView.as_view(), name='update_item'),
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
 ]
