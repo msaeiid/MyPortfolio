@@ -28,3 +28,26 @@ class Item(models.Model):
 
     def get_absolute_url(self):
         return f'/market/items/{self.id}'
+
+
+class Conversation(models.Model):
+    item = models.ForeignKey(Item, on_delete=models.CASCADE, related_name='conversations')
+    members = models.ManyToManyField(User, related_name='conversations')
+    created_at = models.DateTimeField(auto_now_add=True)
+    modified_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['-created_at', ]
+
+        def __str__(self):
+            return f'{self.item.name} - {self.created_at} - {self.modified_at}'
+
+
+class Message(models.Model):
+    conversation = models.ForeignKey(Conversation, on_delete=models.CASCADE, related_name='messages')
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_messages')
+
+    def __str__(self):
+        return f'{self.conversation.item.name} - {self.created_at} - {self.created_by}'

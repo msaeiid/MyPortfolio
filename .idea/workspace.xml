@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="stable until 1:39:57">
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/item_list.html" afterDir="false" />
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="stable until 1:53:41">
+      <change afterPath="$PROJECT_DIR$/Marketplace/migrations/0003_alter_item_image_conversation_message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +139,6 @@
       <workItem from="1708606149999" duration="5814000" />
       <workItem from="1708632170458" duration="4970000" />
       <workItem from="1708671752041" duration="1288000" />
-    </task>
-    <task id="LOCAL-00006" summary="Logout developer">
-      <option name="closed" value="true" />
-      <created>1708180741378</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1708180741378</updated>
     </task>
     <task id="LOCAL-00007" summary="Some bugfix">
       <option name="closed" value="true" />
@@ -529,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708692266772</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="stable until 1:53:41">
+      <option name="closed" value="true" />
+      <created>1708692723185</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1708692723185</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -566,7 +569,8 @@
     <MESSAGE value="1:36:56" />
     <MESSAGE value="Stable" />
     <MESSAGE value="stable until 1:39:57" />
-    <option name="LAST_COMMIT_MESSAGE" value="stable until 1:39:57" />
+    <MESSAGE value="stable until 1:53:41" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable until 1:53:41" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,7 +597,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/Marketplace/item_list.html</url>
-          <line>48</line>
+          <line>49</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
