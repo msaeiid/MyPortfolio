@@ -118,13 +118,6 @@ class AddConversation(LoginRequiredMixin, TemplateView):
 
     def post(self, request, *args, **kwargs):
         item = get_object_or_404(Item, pk=kwargs.get('item_pk'))
-        if item.created_by == request.user:
-            return redirect('market:dashboard')
-
-        conversations = item.conversations.filter(members__in=[request.user.id])
-        if conversations:
-            pass  # redirect to conversation
-
         form = MessageForm(request.POST)
         if form.is_valid():
             conversation = Conversation.objects.create(item=item)
@@ -140,6 +133,13 @@ class AddConversation(LoginRequiredMixin, TemplateView):
             return redirect('Marketplace:item_detail', pk=item.pk)
 
     def get(self, request, *args, **kwargs):
+        item = get_object_or_404(Item, pk=kwargs.get('item_pk'))
+        if item.created_by == request.user:
+            return redirect('market:dashboard')
+
+        conversations = item.conversations.filter(members__in=[request.user.id])
+        if conversations:
+            return redirect('Marketplace:conversation_detail', pk=conversations.first().id)
         form = MessageForm()
         return render(request, self.template_name, {'form': form})
 
@@ -155,7 +155,22 @@ class InboxView(LoginRequiredMixin, TemplateView):
         return render(request, self.template_name, context)
 
 
-class ConversationDetail(LoginRequiredMixin, DetailView):
+class ConversationDetail(LoginRequiredMixin, TemplateView):
     model = Conversation
     template_name = 'Marketplace/conversation_detail.html'
-    context_object_name = 'conversation'
+
+    def get(self, request, *args, **kwargs):
+        conversation = Conversation.objects.get(pk=kwargs.get('pk'))
+        form = MessageForm()
+
+        context = {'conversation': conversation, 'form': form}
+        return render(request, self.template_name, context)
+
+    def post(self, request, *args, **kwargs):
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            message.conversation = Conversation.objects.get(pk=kwargs.get('pk'))
+            message.created_by = request.user
+            message.save()
+        return redirect('Marketplace:conversation_detail', pk=kwargs.get('pk'))
