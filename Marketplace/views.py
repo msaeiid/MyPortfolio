@@ -4,8 +4,9 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, DetailView, CreateView, DeleteView
-from Marketplace.forms import SignUpForm, AddItemForm
+from Marketplace.forms import SignUpForm, AddItemForm, EditItemForm
 from Marketplace.models import Item, Category
+from Portfolio.views import UpdateView
 
 
 class Index(TemplateView):
@@ -35,13 +36,6 @@ class ItemDetail(DetailView):
         return context
 
 
-class SignUp(CreateView):
-    model = User
-    form_class = SignUpForm
-    template_name = 'Marketplace/signup.html'
-    success_url = 'market/login'
-
-
 class AddItemView(LoginRequiredMixin, CreateView):
     model = Item
     template_name = 'Marketplace/add_item.html'
@@ -61,6 +55,24 @@ class AddItemView(LoginRequiredMixin, CreateView):
         return super(AddItemView, self).form_valid(form)
 
 
+class DeleteItemView(LoginRequiredMixin, DeleteView):
+    model = Item
+    success_url = reverse_lazy('Marketplace:dashboard')
+    template_name = 'Marketplace/item_confirm_delete.html'
+
+    def delete(self, request, *args, **kwargs):
+        item = get_object_or_404(Item, pk=self.kwargs.get('pk', None), created_by=self.request.user)
+        item.delete()
+        return reverse_lazy(self.success_url)
+
+
+class SignUp(CreateView):
+    model = User
+    form_class = SignUpForm
+    template_name = 'Marketplace/signup.html'
+    success_url = 'market/login'
+
+
 class DashboardView(TemplateView):
     model = Item
     template_name = 'Marketplace/dashboard/index.html'
@@ -69,10 +81,3 @@ class DashboardView(TemplateView):
         items = Item.objects.filter(created_by=request.user)
 
         return render(request, self.template_name, {'items': items})
-
-
-@login_required
-def delete_item(request, pk):
-    item = get_object_or_404(Item, pk=pk, created_by=request.user)
-    item.delete()
-    return reverse_lazy('Marketplace:dashboard')

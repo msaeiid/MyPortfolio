@@ -1,0 +1,17 @@
+{% extends 'Marketplace/base.html' %}
+
+{% block title %}
+    Delete confirm {{ object.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
+
+        <form method="post" action="{% url 'Marketplace:delete_item' object.pk %}">
+            {% csrf_token %}
+            <p class="mb-6 text-3xl">Are you sure to delete {{ object.name }}</p>
+            <button class="py-4 px-8 text-lg bg-red-500 hover:bg-teal-700 rounded-xl text-white">Delete</button>
+        </form>
+    </div>
+
+{% endblock %}

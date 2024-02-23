@@ -24,7 +24,7 @@
                     </p>
                     <a href="#"
                        class="inline-block mt-6 px-6 py-6 text-lg font-semibold bg-teal-500 text-white rounded-xl">Edit</a>
-                    <a href="{% url 'Marketplace:delete_item' item.id %}"
+                    <a href="{% url 'Marketplace:delete_item' pk=item.pk %}"
                        class="inline-block mt-6 px-6 py-6 text-lg font-semibold bg-red-500 text-white rounded-xl">Delete</a>
                 </div>
             {% else %}
