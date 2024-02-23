@@ -3,7 +3,7 @@ from django.urls import path
 
 from Marketplace.forms import LoginForm
 from Marketplace.views import Index, Contact, ItemDetail, SignUp, AddItemView, DashboardView, DeleteItemView, \
-    UpdateItemView, ListItemView, AddConversation
+    UpdateItemView, ListItemView, AddConversation, InboxView
 
 app_name = 'Marketplace'
 
@@ -20,4 +20,5 @@ urlpatterns = [
     path('list_item/', ListItemView.as_view(), name='list_item'),
     path('dashboard/', DashboardView.as_view(), name='dashboard'),
     path('new/<int:item_pk>', AddConversation.as_view(), name='new_conversation'),
+    path('inbox/', InboxView.as_view(), name='inbox'),
 ]

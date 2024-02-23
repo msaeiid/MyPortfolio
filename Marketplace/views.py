@@ -103,7 +103,7 @@ class SignUp(CreateView):
     success_url = 'market/login'
 
 
-class DashboardView(TemplateView):
+class DashboardView(LoginRequiredMixin, TemplateView):
     model = Item
     template_name = 'Marketplace/dashboard/index.html'
 
@@ -113,7 +113,7 @@ class DashboardView(TemplateView):
         return render(request, self.template_name, {'items': items})
 
 
-class AddConversation(TemplateView):
+class AddConversation(LoginRequiredMixin, TemplateView):
     template_name = 'Marketplace/new_conversation.html'
 
     def post(self, request, *args, **kwargs):
@@ -142,3 +142,14 @@ class AddConversation(TemplateView):
     def get(self, request, *args, **kwargs):
         form = MessageForm()
         return render(request, self.template_name, {'form': form})
+
+
+class InboxView(LoginRequiredMixin, TemplateView):
+    template_name = 'Marketplace/inbox.html'
+    model = Conversation
+
+    def get(self, request, *args, **kwargs):
+        conversations = request.user.conversations.all()
+
+        context = {'conversations': conversations}
+        return render(request, self.template_name, context)
