@@ -74,6 +74,9 @@ class UpdateItemView(LoginRequiredMixin, UpdateView):
         context['page_title'] = 'Update'
         return context
 
+    def get_object(self):
+        return get_object_or_404(Item, pk=self.kwargs.get('pk'), created_by=self.request.user)
+
 
 class SignUp(CreateView):
     model = User
