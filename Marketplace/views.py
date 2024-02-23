@@ -86,9 +86,13 @@ class ListItemView(TemplateView):
     def get(self, request, *args, **kwargs):
         query = request.GET.get('query', None)
         items = Item.objects.filter(is_sold=False)
+        categories = Category.objects.all()
+        category_id = int(request.GET.get('category', 0))
         if query:
             items = items.filter(Q(name__icontains=query) | Q(description__icontains=query))
-        context = {'items': items}
+        if category_id:
+            items = items.filter(category_id=category_id)
+        context = {'items': items, 'categories': categories, 'category_id': category_id}
         return render(request, self.template_name, context)
 
 
