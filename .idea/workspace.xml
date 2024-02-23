@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="stable until 1:39:57">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Marketplace/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/item_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.MyPortfolio.executor": "Debug",
+    "Django Server.MyPortfolio.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -138,14 +138,6 @@
       <workItem from="1708606149999" duration="5814000" />
       <workItem from="1708632170458" duration="4970000" />
       <workItem from="1708671752041" duration="1288000" />
-    </task>
-    <task id="LOCAL-00003" summary="some improve on views">
-      <option name="closed" value="true" />
-      <created>1708159904316</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1708159904316</updated>
     </task>
     <task id="LOCAL-00004" summary="SOme improve">
       <option name="closed" value="true" />
@@ -531,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708688782307</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="stable until 1:39:57">
+      <option name="closed" value="true" />
+      <created>1708689872883</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1708689872883</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,8 +590,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Marketplace/views.py</url>
-          <line>90</line>
-          <option name="timeStamp" value="72" />
+          <line>85</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/Marketplace/item_list.html</url>

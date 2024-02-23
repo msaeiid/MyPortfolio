@@ -1,5 +1,6 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
+from django.db.models import Q
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView
@@ -78,13 +79,17 @@ class UpdateItemView(LoginRequiredMixin, UpdateView):
         return get_object_or_404(Item, pk=self.kwargs.get('pk'), created_by=self.request.user)
 
 
-def list_item_views(request, *args, **kwargs):
-    items = Item.objects.filter(is_sold=False)
-    if request.method == 'GET':
+class ListItemView(TemplateView):
+    model = Item
+    template_name = 'Marketplace/item_list.html'
+
+    def get(self, request, *args, **kwargs):
+        query = request.GET.get('query', None)
+        items = Item.objects.filter(is_sold=False)
+        if query:
+            items = items.filter(Q(name__icontains=query) | Q(description__icontains=query))
         context = {'items': items}
-        return render(request, 'Marketplace/item_list.html', context)
-    elif request.method == 'POST':
-        pass
+        return render(request, self.template_name, context)
 
 
 class SignUp(CreateView):
