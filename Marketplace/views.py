@@ -1,8 +1,8 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView
+from django.views.generic import TemplateView, DetailView, CreateView, DeleteView, UpdateView, ListView
 from Marketplace.forms import SignUpForm, AddItemForm, UpdateItemForm
 from Marketplace.models import Item, Category
 
@@ -76,6 +76,13 @@ class UpdateItemView(LoginRequiredMixin, UpdateView):
 
     def get_object(self):
         return get_object_or_404(Item, pk=self.kwargs.get('pk'), created_by=self.request.user)
+
+
+class ListItemView(ListView):
+    model = Item
+    template_name = 'Marketplace/item_list.html'
+    context_object_name = 'items'
+    queryset = Item.objects.filter(is_sold=False)
 
 
 class SignUp(CreateView):
