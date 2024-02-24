@@ -23,48 +23,60 @@ class AboutForm(ModelForm):
             'twitter',
             'facebook',
         ]
-
-    birth_date = forms.DateField(
-        widget=forms.DateInput(attrs={'type': 'date'}))
-
-    def __init__(self, *args, **kwargs):
-        super(AboutForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'avatar': forms.DateInput(attrs={'class': 'form-control'}),
+            'resume': forms.DateInput(attrs={'class': 'form-control'}),
+            'birth_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+            'phone_number': forms.DateInput(attrs={'class': 'form-control'}),
+            'country': forms.DateInput(attrs={'class': 'form-control'}),
+            'city': forms.DateInput(attrs={'class': 'form-control'}),
+            'hide_sensitive': forms.DateInput(attrs={'class': 'form-control'}),
+            'postal_code': forms.DateInput(attrs={'class': 'form-control'}),
+            'street_address': forms.DateInput(attrs={'class': 'form-control'}),
+            'professional_summary': forms.DateInput(attrs={'class': 'form-control'}),
+            'linkedin': forms.DateInput(attrs={'class': 'form-control'}),
+            'github': forms.DateInput(attrs={'class': 'form-control'}),
+            'twitter': forms.DateInput(attrs={'class': 'form-control'}),
+            'facebook': forms.DateInput(attrs={'class': 'form-control'}),
+        }
 
 
 class ProfileForm(ModelForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email', ]
-
-    def __init__(self, *args, **kwargs):
-        super(ProfileForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'las_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'})
+        }
 
 
 class InterestForm(ModelForm):
     class Meta:
         model = Portfolio
         fields = ['interests', ]
-
-    def __init__(self, *args, **kwargs):
-        super(InterestForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'interests': forms.TextInput(attrs={'class': 'form-control'})
+        }
 
 
 class CertificateForm(ModelForm):
     class Meta:
         model = Certificate
         fields = ['name', 'issuing_organization', 'issue_year', 'issue_month', 'expiration_year', 'expiration_month',
-                  'Credential_id', 'credential_url']
+                  'credential_id', 'credential_url']
 
-    def __init__(self, *args, **kwargs):
-        super(CertificateForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'issuing_organization': forms.TextInput(attrs={'class': 'form-control'}),
+            'issue_year': forms.TextInput(attrs={'class': 'form-control'}),
+            'issue_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'expiration_year': forms.TextInput(attrs={'class': 'form-control'}),
+            'expiration_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'credential_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'credential_url': forms.TextInput(attrs={'class': 'form-control'})
+        }
 
 
 class ExperienceForm(ModelForm):
@@ -73,10 +85,19 @@ class ExperienceForm(ModelForm):
         fields = ['title', 'company_name', 'city', 'country', 'start_year', 'start_month',
                   'end_year', 'end_month', 'is_present', 'industry', 'description']
 
-    def __init__(self, *args, **kwargs):
-        super(ExperienceForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'company_name': forms.TextInput(attrs={'class': 'form'}),
+            'city': forms.TextInput(attrs={'class': 'form-control'}),
+            'country': forms.TextInput(attrs={'class': 'form-control'}),
+            'start_year': forms.TextInput(attrs={'class': 'form-control'}),
+            'start_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'end_year': forms.TextInput(attrs={'class': 'form-control'}),
+            'end_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'is_present': forms.TextInput(attrs={'class': 'form-control'}),
+            'industry': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.TextInput(attrs={'class': 'form-control'})
+        }
 
 
 class EducationForm(ModelForm):
@@ -85,18 +106,25 @@ class EducationForm(ModelForm):
         fields = ['school', 'degree', 'field_of_study', 'city', 'country', 'start_year', 'start_month',
                   'end_year', 'end_month', 'grade', 'description']
 
-    def __init__(self, *args, **kwargs):
-        super(EducationForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'school': forms.TextInput(attrs={'class': 'form-control'}),
+            'degree': forms.TextInput(attrs={'class': 'form-control'}),
+            'field_of_study': forms.TextInput(attrs={'class': 'form-control'}),
+            'city': forms.TextInput(attrs={'class': 'form-control'}),
+            'country': forms.TextInput(attrs={'class': 'form-control'}),
+            'start_year': forms.TextInput(attrs={'class': 'form-control'}),
+            'start_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'end_year': forms.TextInput(attrs={'class': 'form-control'}),
+            'end_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'grade': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.TextInput(attrs={'class': 'form-control'})
+        }
 
 
 class SkillForm(ModelForm):
     class Meta:
         model = Skill
         fields = ['title', ]
-
-    def __init__(self, *args, **kwargs):
-        super(SkillForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'})
+        }
