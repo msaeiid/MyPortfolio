@@ -24,20 +24,20 @@ class AboutForm(ModelForm):
             'facebook',
         ]
         widgets = {
-            'avatar': forms.DateInput(attrs={'class': 'form-control'}),
-            'resume': forms.DateInput(attrs={'class': 'form-control'}),
+            'avatar': forms.FileInput(attrs={'class': 'form-control'}),
+            'resume': forms.FileInput(attrs={'class': 'form-control'}),
             'birth_date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
             'phone_number': forms.DateInput(attrs={'class': 'form-control'}),
             'country': forms.DateInput(attrs={'class': 'form-control'}),
             'city': forms.DateInput(attrs={'class': 'form-control'}),
-            'hide_sensitive': forms.DateInput(attrs={'class': 'form-control'}),
+            'hide_sensitive': forms.CheckboxInput(attrs={'class': 'form-control'}),
             'postal_code': forms.DateInput(attrs={'class': 'form-control'}),
             'street_address': forms.DateInput(attrs={'class': 'form-control'}),
-            'professional_summary': forms.DateInput(attrs={'class': 'form-control'}),
-            'linkedin': forms.DateInput(attrs={'class': 'form-control'}),
-            'github': forms.DateInput(attrs={'class': 'form-control'}),
-            'twitter': forms.DateInput(attrs={'class': 'form-control'}),
-            'facebook': forms.DateInput(attrs={'class': 'form-control'}),
+            'professional_summary': forms.Textarea(attrs={'class': 'form-control'}),
+            'linkedin': forms.URLInput(attrs={'class': 'form-control'}),
+            'github': forms.URLInput(attrs={'class': 'form-control'}),
+            'twitter': forms.URLInput(attrs={'class': 'form-control'}),
+            'facebook': forms.URLInput(attrs={'class': 'form-control'}),
         }
 
 
@@ -47,7 +47,7 @@ class ProfileForm(ModelForm):
         fields = ['first_name', 'last_name', 'email', ]
         widgets = {
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'las_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.TextInput(attrs={'class': 'form-control'})
         }
 
@@ -57,7 +57,7 @@ class InterestForm(ModelForm):
         model = Portfolio
         fields = ['interests', ]
         widgets = {
-            'interests': forms.TextInput(attrs={'class': 'form-control'})
+            'interests': forms.Textarea(attrs={'class': 'form-control'})
         }
 
 
@@ -65,17 +65,17 @@ class CertificateForm(ModelForm):
     class Meta:
         model = Certificate
         fields = ['name', 'issuing_organization', 'issue_year', 'issue_month', 'expiration_year', 'expiration_month',
-                  'credential_id', 'credential_url']
+                  'Credential_id', 'credential_url']
 
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'issuing_organization': forms.TextInput(attrs={'class': 'form-control'}),
-            'issue_year': forms.TextInput(attrs={'class': 'form-control'}),
-            'issue_month': forms.TextInput(attrs={'class': 'form-control'}),
-            'expiration_year': forms.TextInput(attrs={'class': 'form-control'}),
-            'expiration_month': forms.TextInput(attrs={'class': 'form-control'}),
-            'credential_id': forms.TextInput(attrs={'class': 'form-control'}),
-            'credential_url': forms.TextInput(attrs={'class': 'form-control'})
+            'issue_year': forms.Select(attrs={'class': 'form-control'}),
+            'issue_month': forms.Select(attrs={'class': 'form-control'}),
+            'expiration_year': forms.Select(attrs={'class': 'form-control'}),
+            'expiration_month': forms.Select(attrs={'class': 'form-control'}),
+            'Credential_id': forms.TextInput(attrs={'class': 'form-control'}),
+            'credential_url': forms.URLInput(attrs={'class': 'form-control'})
         }
 
 
@@ -87,16 +87,16 @@ class ExperienceForm(ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'company_name': forms.TextInput(attrs={'class': 'form'}),
+            'company_name': forms.TextInput(attrs={'class': 'form-control'}),
             'city': forms.TextInput(attrs={'class': 'form-control'}),
             'country': forms.TextInput(attrs={'class': 'form-control'}),
-            'start_year': forms.TextInput(attrs={'class': 'form-control'}),
-            'start_month': forms.TextInput(attrs={'class': 'form-control'}),
-            'end_year': forms.TextInput(attrs={'class': 'form-control'}),
-            'end_month': forms.TextInput(attrs={'class': 'form-control'}),
-            'is_present': forms.TextInput(attrs={'class': 'form-control'}),
+            'start_year': forms.Select(attrs={'class': 'form-control'}),
+            'start_month': forms.Select(attrs={'class': 'form-control'}),
+            'end_year': forms.Select(attrs={'class': 'form-control'}),
+            'end_month': forms.Select(attrs={'class': 'form-control'}),
+            'is_present': forms.CheckboxInput(attrs={'class': 'form-control'}),
             'industry': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.TextInput(attrs={'class': 'form-control'})
+            'description': forms.Textarea(attrs={'class': 'form-control'})
         }
 
 
@@ -112,12 +112,12 @@ class EducationForm(ModelForm):
             'field_of_study': forms.TextInput(attrs={'class': 'form-control'}),
             'city': forms.TextInput(attrs={'class': 'form-control'}),
             'country': forms.TextInput(attrs={'class': 'form-control'}),
-            'start_year': forms.TextInput(attrs={'class': 'form-control'}),
-            'start_month': forms.TextInput(attrs={'class': 'form-control'}),
-            'end_year': forms.TextInput(attrs={'class': 'form-control'}),
-            'end_month': forms.TextInput(attrs={'class': 'form-control'}),
+            'start_year': forms.Select(attrs={'class': 'form-control'}),
+            'start_month': forms.Select(attrs={'class': 'form-control'}),
+            'end_year': forms.Select(attrs={'class': 'form-control'}),
+            'end_month': forms.Select(attrs={'class': 'form-control'}),
             'grade': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.TextInput(attrs={'class': 'form-control'})
+            'description': forms.Textarea(attrs={'class': 'form-control'})
         }
 
 
@@ -126,5 +126,5 @@ class SkillForm(ModelForm):
         model = Skill
         fields = ['title', ]
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'})
+            'title': forms.Select(attrs={'class': 'form-control'})
         }

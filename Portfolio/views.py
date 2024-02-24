@@ -38,7 +38,7 @@ class AboutView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
         if form.is_valid():
             form.save()
             messages.success(request, 'profile has been updated')
-        return redirect(reverse_lazy('home'))
+        return redirect(reverse_lazy('Portfolio:home'))
 
 
 class ProfileView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
@@ -52,7 +52,7 @@ class ProfileView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
         if form.is_valid():
             form.save()
             messages.success(request, 'about section has been updated')
-        return redirect(reverse_lazy('home'))
+        return redirect(reverse_lazy('Portfolio:home'))
 
 
 class InterestsView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
@@ -67,7 +67,7 @@ class InterestsView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
         if form.is_valid():
             form.save()
             messages.success(request, 'interest section has been updated')
-        return redirect(reverse_lazy('home'))
+        return redirect(reverse_lazy('Portfolio:home'))
 
 
 class UpdateView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
@@ -116,4 +116,4 @@ class UpdateView(PermissionRequiredMixin, LoginRequiredMixin, TemplateView):
             form = form(request.POST or None, instance=instance)
             if form.is_valid():
                 form.save()
-        return redirect(reverse_lazy(f'{extracted_data[0]}'))
+        return redirect(reverse_lazy(f'Portfolio:{extracted_data[0]}'))
