@@ -5,35 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="bugfix">
-      <change afterPath="$PROJECT_DIR$/Report/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/880366db-9bf3-498e-92b8-528c92c25475.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/880366db-9bf3-498e-92b8-528c92c25475.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Marketplace/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyPortfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyPortfolio/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/add_item.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/item/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/conversation/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/conversation_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/conversation/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/conversation/inbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/item_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/item/confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/item_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/item/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/item/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/new_conversation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/conversation/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Marketplace/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Marketplace/account/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_certificate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/sub_template/_certificate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_create_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/sub_template/_create_modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_education.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/sub_template/_education.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_experience.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/sub_template/_experience.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_skills.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/sub_template/_skills.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/_update_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/sub_template/_update_modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Portfolio/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Portfolio/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Marketplace/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report/migrations/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
