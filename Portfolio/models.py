@@ -146,23 +146,6 @@ class Skill(models.Model):
         return self.title
 
 
-class Language(models.Model):
-    language = models.CharField(_('Language'), max_length=20, blank=False)
-    Proficiency_Choice = (
-        ('elementary', 'Elementary proficiency'),
-        ('limited', 'Limited working proficiency'),
-        ('professional', 'Professional working proficiency'),
-        ('full', 'Full professional proficiency'),
-        ('native', 'Native or bilingual proficiency'),
-    )
-    proficiency = models.CharField(_('Proficiency'), max_length=20, blank=False, choices=Proficiency_Choice)
-    # relation
-    portfolio = models.ForeignKey('Portfolio', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.language
-
-
 class Portfolio(models.Model):
     avatar = models.ImageField(upload_to='avatars/', blank=True, null=True)
     birth_date = models.DateField(_('Birth date'), blank=True, null=True, default=datetime.today)

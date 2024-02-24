@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from Portfolio.models import Portfolio, Experience, Education, Certificate, Skill, Language
+from Portfolio.models import Portfolio, Experience, Education, Certificate, Skill
 
 
 # Register your models here.
@@ -27,8 +27,3 @@ class CertificateAdmin(admin.ModelAdmin):
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
     list_display = ('portfolio',)
-
-
-@admin.register(Language)
-class LanguageAdmin(admin.ModelAdmin):
-    list_display = ('portfolio', 'language', 'proficiency')

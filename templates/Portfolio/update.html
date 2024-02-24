@@ -22,13 +22,13 @@
         <section class="resume-section p-3 p-lg-5 flex-column" id="experience">
             <div class="my-auto">
                 {% if template == 'experience' %}
-                    {% include 'Portfolio/_experience.html' %}
+                    {% include 'Portfolio/sub_template/_experience.html' %}
                 {% elif template == 'education' %}
-                    {% include 'Portfolio/_education.html' %}
+                    {% include 'Portfolio/sub_template/_education.html' %}
                 {% elif template == 'certificate' %}
-                    {% include 'Portfolio/_certificate.html' %}
+                    {% include 'Portfolio/sub_template/_certificate.html' %}
                 {% elif template == 'skill' %}
-                    {% include 'Portfolio/_skills.html' %}
+                    {% include 'Portfolio/sub_template/_skills.html' %}
                 {% endif %}
             </div>
         </section>

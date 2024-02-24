@@ -21,12 +21,12 @@ class Index(TemplateView):
 
 class Contact(TemplateView):
     def get(self, request, *args, **kwargs):
-        return render(request, template_name='Marketplace/contact.html')
+        return render(request, template_name='Marketplace/conversation/contact.html')
 
 
 class ItemDetail(DetailView):
     model = Item
-    template_name = 'Marketplace/item_detail.html'
+    template_name = 'Marketplace/item/detail.html'
 
     def get_context_data(self, **kwargs):
         context = super(ItemDetail, self).get_context_data(**kwargs)
@@ -37,7 +37,7 @@ class ItemDetail(DetailView):
 
 class AddItemView(LoginRequiredMixin, CreateView):
     model = Item
-    template_name = 'Marketplace/add_item.html'
+    template_name = 'Marketplace/item/add.html'
     form_class = AddItemForm
 
     def get_context_data(self, **kwargs):
@@ -57,7 +57,7 @@ class AddItemView(LoginRequiredMixin, CreateView):
 class DeleteItemView(LoginRequiredMixin, DeleteView):
     model = Item
     success_url = reverse_lazy('Marketplace:dashboard')
-    template_name = 'Marketplace/item_confirm_delete.html'
+    template_name = 'Marketplace/item/confirm_delete.html'
 
     def delete(self, request, *args, **kwargs):
         item = get_object_or_404(Item, pk=self.kwargs.get('pk', None), created_by=self.request.user)
@@ -67,7 +67,7 @@ class DeleteItemView(LoginRequiredMixin, DeleteView):
 
 class UpdateItemView(LoginRequiredMixin, UpdateView):
     model = Item
-    template_name = 'Marketplace/add_item.html'
+    template_name = 'Marketplace/item/add.html'
     form_class = UpdateItemForm
 
     def get_context_data(self, **kwargs):
@@ -81,7 +81,7 @@ class UpdateItemView(LoginRequiredMixin, UpdateView):
 
 class ListItemView(TemplateView):
     model = Item
-    template_name = 'Marketplace/item_list.html'
+    template_name = 'Marketplace/item/list.html'
 
     def get(self, request, *args, **kwargs):
         query = request.GET.get('query', '')
@@ -99,7 +99,7 @@ class ListItemView(TemplateView):
 class SignUp(CreateView):
     model = User
     form_class = SignUpForm
-    template_name = 'Marketplace/signup.html'
+    template_name = 'Marketplace/account/signup.html'
     success_url = 'market/login'
 
 
@@ -114,7 +114,7 @@ class DashboardView(LoginRequiredMixin, TemplateView):
 
 
 class AddConversation(LoginRequiredMixin, TemplateView):
-    template_name = 'Marketplace/new_conversation.html'
+    template_name = 'Marketplace/conversation/new.html'
 
     def post(self, request, *args, **kwargs):
         item = get_object_or_404(Item, pk=kwargs.get('item_pk'))
@@ -145,7 +145,7 @@ class AddConversation(LoginRequiredMixin, TemplateView):
 
 
 class InboxView(LoginRequiredMixin, TemplateView):
-    template_name = 'Marketplace/inbox.html'
+    template_name = 'Marketplace/conversation/inbox.html'
     model = Conversation
 
     def get(self, request, *args, **kwargs):
@@ -157,7 +157,7 @@ class InboxView(LoginRequiredMixin, TemplateView):
 
 class ConversationDetail(LoginRequiredMixin, TemplateView):
     model = Conversation
-    template_name = 'Marketplace/conversation_detail.html'
+    template_name = 'Marketplace/conversation/detail.html'
 
     def get(self, request, *args, **kwargs):
         conversation = Conversation.objects.get(pk=kwargs.get('pk'))

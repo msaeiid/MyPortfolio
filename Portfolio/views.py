@@ -8,7 +8,7 @@ from django.contrib import messages
 
 from Portfolio.forms import AboutForm, ProfileForm, InterestForm, CertificateForm, EducationForm, ExperienceForm, \
     SkillForm
-from Portfolio.models import Portfolio, Experience, Certificate, Skill, Language, Education
+from Portfolio.models import Portfolio, Experience, Certificate, Skill, Education
 
 
 class PortfolioView(TemplateView):
