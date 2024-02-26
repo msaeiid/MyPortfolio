@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="bugfix">
-      <change beforePath="$PROJECT_DIR$/Marketplace/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Marketplace/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report/migrations/__init__.py" beforeDir="false" />
+    <list default="true" id="42f2a703-fa25-4dd6-9055-7389832ebb8f" name="Changes" comment="20:23">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/880366db-9bf3-498e-92b8-528c92c25475.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/880366db-9bf3-498e-92b8-528c92c25475.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,22 +154,9 @@
       <workItem from="1708772379746" duration="141000" />
       <workItem from="1708793859532" duration="1914000" />
       <workItem from="1708800414507" duration="1425000" />
-    </task>
-    <task id="LOCAL-00018" summary="Update page developed">
-      <option name="closed" value="true" />
-      <created>1708341278020</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1708341278020</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Update page developed">
-      <option name="closed" value="true" />
-      <created>1708341337966</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1708341337966</updated>
+      <workItem from="1708864677076" duration="1291000" />
+      <workItem from="1708875926844" duration="757000" />
+      <workItem from="1708891836651" duration="598000" />
     </task>
     <task id="LOCAL-00020" summary="Update page developed">
       <option name="closed" value="true" />
@@ -547,7 +534,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708795399183</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="20:23">
+      <option name="closed" value="true" />
+      <created>1708803695918</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1708803695918</updated>
+    </task>
+    <task id="LOCAL-00068" summary="20:23">
+      <option name="closed" value="true" />
+      <created>1708803748985</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1708803748985</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +568,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="about update works fine" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="some improve on views" />
     <MESSAGE value="SOme improve" />
@@ -590,7 +592,8 @@
     <MESSAGE value="Learn Django by Building an Online Marketplace – Python Tutorial for Beginners&#10;Finished" />
     <MESSAGE value="unused files removed&#10;Finished" />
     <MESSAGE value="bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
+    <MESSAGE value="20:23" />
+    <option name="LAST_COMMIT_MESSAGE" value="20:23" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
